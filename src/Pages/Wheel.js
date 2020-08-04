@@ -21,11 +21,11 @@ export default function Wheel() {
 
       <div>
         <ul>
-          <li><Link to={`${url}/hub`}><Hub /></Link></li>
-          <li><Link to={`${url}/rim`}>Rim</Link></li>
-          <li><Link to={`${url}/spoke`}>Spoke</Link></li>
-          <li><Link to={`${url}/nipple`}>Nipple</Link></li>
-          <li><Link to={`${url}/lacingPatter`}>Lacing Pattern</Link></li>
+          <li><Link to={`${url}/hub`} className="btn btn-primary btn-small"><Hub /></Link></li>
+          <li><Link to={`${url}/rim`} className="btn btn-primary btn-small">Rim</Link></li>
+          <li><Link to={`${url}/spoke`} className="btn btn-primary btn-small">Spoke</Link></li>
+          <li><Link to={`${url}/nipple`} className="btn btn-primary btn-small">Nipple</Link></li>
+          <li><Link to={`${url}/lacingPatter`} className="btn btn-primary btn-small">Lacing Pattern</Link></li>
         </ul>
 
         <Switch>

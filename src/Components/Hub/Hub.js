@@ -24,30 +24,32 @@ export const Hub = () => {
       <form class="">
         <fieldset id="form--hub">
           <div className="form-row">
-
-          
-              <div className="form-group col-md-7">
-                  <label class="form-label" for="hubName">Hub Name</label>
-                  <input 
-                      className="form-control"
-                      type='text'
-                      id='hubName' 
-                      name='hubName' 
-                      value={hub['hubName']} 
-                      onChange={event => handleChange(event)} 
-                  />
-                  <p className=""> optional</p>
-              </div>
-              <div className="form-group col-md-5">
-                  <label 
-                      className="form-label"
-                  > O.L.D</label>
-                  <input 
-                      className="form-control" 
-                      type='text' name='oLD'  value={hub['oLD']} onChange={event => handleChange(event)}
-                  />     
-              </div>
+            <div className="form-group col-md-7">
+              <label class="form-label" for="hubName">Hub Name</label>
+              <input 
+                  className="form-control"
+                  type='text'
+                  id='hubName' 
+                  name='hubName' 
+                  value={hub['hubName']} 
+                  onChange={event => handleChange(event)} 
+              />
+              <p className=""> optional</p>
             </div>
+            <div className="form-group col-md-2">
+              <label 
+                  className="form-label"
+              > O.L.D</label>
+              <input 
+                  className="form-control" 
+                  type='text' name='oLD'  value={hub['oLD']} onChange={event => handleChange(event)}
+              />     
+            </div>
+            <div className="form-group col-md-3">
+              <label className='form-label' htmlFor="hSHD">Spoke Hole Diameter</label>
+              <input className="form-control" type="text" name="hSHD" value={hub['hSHD']} required onChange={event=> {handleChange(event)}} />
+            </div>
+          </div>
      
               <div className="form-row">
                   <div className="form-group col-md-3">
@@ -76,10 +78,7 @@ export const Hub = () => {
                   <input className="form-control" type="text" name="cTFR" value={hub['cTFR']} required onChange={event=> {handleChange(event)}} />
               </div>
               </div>
-              <div className="form-group">
-                  <label className='form-label' htmlFor="hSHD">Spoke Hole Diameter</label>
-                  <input className="form-control" type="text" name="hSHD" value={hub['hSHD']} required onChange={event=> {handleChange(event)}} />
-              </div>
+
           </fieldset>
           <button type="button" className="btn btn-primary">PreV</button>
           <button type="button" className="btn btn-warning">Next</button>
