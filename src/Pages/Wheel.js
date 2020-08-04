@@ -13,19 +13,19 @@ export default function Wheel() {
   let { path, url } = useRouteMatch();
   
   return (
-    <div >
+    <div className="max-width: 800px">
       <h3>This is meat of 32spoke</h3>
       <div id="progressBar" class="progress">
         <div className="progress-bar bg-success" role="progressbar" style={{width: '25%'}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
 
       <div>
-        <ul>
-          <li><Link to={`${url}/hub`} className="btn btn-primary btn-small"><Hub /></Link></li>
-          <li><Link to={`${url}/rim`} className="btn btn-primary btn-small">Rim</Link></li>
-          <li><Link to={`${url}/spoke`} className="btn btn-primary btn-small">Spoke</Link></li>
-          <li><Link to={`${url}/nipple`} className="btn btn-primary btn-small">Nipple</Link></li>
-          <li><Link to={`${url}/lacingPatter`} className="btn btn-primary btn-small">Lacing Pattern</Link></li>
+        <ul className="nav nav-tabs">
+          <li className="nav-item"><Link to={`${url}/hub`} className="btn btn-lg">Hub </Link></li>
+          <li className="nav-item"><Link to={`${url}/rim`} className="nav-link btn btn-lg">Rim</Link></li>
+          <li className="nav-item"><Link to={`${url}/spoke`} className="btn btn-lg">Spoke</Link></li>
+          <li className="nav-item"><Link to={`${url}/nipple`} className="btn btn-lg">Nipple</Link></li>
+          <li className="nav-item"><Link to={`${url}/lacingPatter`} className="btn btn-lg">Lacing Pattern</Link></li>
         </ul>
 
         <Switch>

@@ -8,7 +8,7 @@ export default function Navigation() {
   return (
     <Router>          
       <div>
-        <ul className='nav nav-pills'>
+        <ul className='nav nav-pills nav-fill'>
           <li className='nav-item'>
             <Link to="/" className='nav-link'>Home</Link>
           </li>
