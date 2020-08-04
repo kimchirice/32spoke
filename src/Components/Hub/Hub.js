@@ -20,45 +20,50 @@ export const Hub = () => {
   }
   return (            
     <div>
-      <h3>Hub</h3>
+      <h3>Hub details</h3>
       <form class="">
         <fieldset id="form--hub">
-              <div className="form-group">
-                  <label class="form-label">Hub Name</label>
+          <div className="form-row">
+
+          
+              <div className="form-group col-md-7">
+                  <label class="form-label" for="hubName">Hub Name</label>
                   <input 
-                      className="form-input"
-                      type='text' 
+                      className="form-control"
+                      type='text'
+                      id='hubName' 
                       name='hubName' 
                       value={hub['hubName']} 
                       onChange={event => handleChange(event)} 
                   />
                   <p className=""> optional</p>
               </div>
-              <div className="form-group">
+              <div className="form-group col-md-5">
                   <label 
                       className="form-label"
                   > O.L.D</label>
                   <input 
-                      className="form-input" 
+                      className="form-control" 
                       type='text' name='oLD'  value={hub['oLD']} onChange={event => handleChange(event)}
                   />     
               </div>
-
-              <div class="">
-                  <div class="form-group">
+            </div>
+     
+              <div className="form-row">
+                  <div className="form-group col-md-3">
                   <label  className="form-label" htmlFor="pCDL">P.C.D Left Flange </label>
-                  <input className="form-input" type="text" name='pCDL' value={hub['pCDL']} required onChange={event=> {handleChange(event)}} />
+                  <input className="form-control" type="text" name='pCDL' value={hub['pCDL']} required onChange={event=> {handleChange(event)}} />
                   </div>
 
-                  <div class="form-group">
+                  <div className="form-group col-md-3">
                   <label className="form-label" htmlFor="pCDR">P.C.D Right Flange</label>
-                  <input className="form-input" type="text" name='pCDR'value={hub['pCDR']} required onChange={event=> {handleChange(event)}} />
+                  <input className="form-control" type="text" name='pCDR'value={hub['pCDR']} required onChange={event=> {handleChange(event)}} />
                   </div>
-              </div>
+             
 
-              <div className="form-group">
+              <div className="form-group col-md-3">
                   <label className="form-label" htmlFor="cTFL">Center to Flange Left</label>
-                  <input className="form-input" 
+                  <input className="form-control" 
                       type='text' 
                       name='cTFL' 
                       value={hub['cTFL']} 
@@ -66,16 +71,18 @@ export const Hub = () => {
                       onChange={event => {handleChange(event)}} />
               </div>
 
-              <div class="form-group">
+              <div class="form-group col-md-3">
                   <label className='form-label' htmlFor="cTFR">Center to Flange Right</label>
-                  <input className="form-input" type="text" name="cTFR" value={hub['cTFR']} required onChange={event=> {handleChange(event)}} />
+                  <input className="form-control" type="text" name="cTFR" value={hub['cTFR']} required onChange={event=> {handleChange(event)}} />
               </div>
-
+              </div>
               <div className="form-group">
                   <label className='form-label' htmlFor="hSHD">Spoke Hole Diameter</label>
-                  <input className="form-input" type="text" name="hSHD" value={hub['hSHD']} required onChange={event=> {handleChange(event)}} />
+                  <input className="form-control" type="text" name="hSHD" value={hub['hSHD']} required onChange={event=> {handleChange(event)}} />
               </div>
           </fieldset>
+          <button type="button" className="btn btn-primary">PreV</button>
+          <button type="button" className="btn btn-warning">Next</button>
       </form>
     </div>
   )
