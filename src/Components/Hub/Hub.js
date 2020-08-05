@@ -18,6 +18,11 @@ export const Hub = () => {
     hub[name] = value
     setHub(hub)
   }
+
+  const handleClick = (event) => {
+    console.log(event.target)
+  }
+
   return (            
     <div>
       <h3>Hub details</h3>
@@ -81,7 +86,7 @@ export const Hub = () => {
 
           </fieldset>
           <button type="button" className="btn btn-primary">PreV</button>
-          <button type="button" className="btn btn-warning">Next</button>
+          <button onClick={handleClick} type="button" className="btn btn-warning">Next</button>
       </form>
     </div>
   )

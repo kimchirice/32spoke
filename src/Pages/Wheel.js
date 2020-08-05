@@ -13,7 +13,7 @@ export default function Wheel() {
   let { path, url } = useRouteMatch();
   
   return (
-    <div className="max-width: 800px">
+    <div >
       <h3>This is meat of 32spoke</h3>
       <div id="progressBar" class="progress">
         <div className="progress-bar bg-success" role="progressbar" style={{width: '25%'}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
