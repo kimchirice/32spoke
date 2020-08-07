@@ -1,10 +1,9 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import { WheelContext } from '../../Context/WheelContext'
-import { useContext } from 'react';
 
-function Step1() {
+export default function Hub() {
   const {wheel, handleChange} = useContext(WheelContext);
-  render() {
+  
     return (            
       <div>
         <h3>Hub details</h3>
@@ -25,10 +24,8 @@ function Step1() {
               </div>
             </div>
           </fieldset>
-          <button type="button" className="btn btn-primary">PreV</button>
-          <button onClick={handleClick} type="button" className="btn btn-warning">Next</button>
+          
         </form>
       </div>
     );
-  };
 }
