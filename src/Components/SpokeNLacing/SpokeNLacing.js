@@ -1,23 +1,24 @@
 import React,{ useContext } from 'react'
 import { WheelContext } from '../../Context/WheelContext'
 
-export default function Hub() {
+export default function SpokeNLacing() {
   const {wheel, handleChange} = useContext(WheelContext);
   
-    return (            
+  
+  return (            
       <div>
-        <h3>Hub details</h3>
+        <h3>Spoke & Lacing</h3>
         <form class="">
-          <fieldset id="form--hub">
+          <fieldset id="form--spokeNLacing">
             <div className="form-row">
               <div className="form-group col-md-7">
-                <label class="form-label" htmlFor="hubName">Hub Name</label>
+                <label class="form-label" htmlFor="spokeName">Spoke Name</label>
                 <input 
                     className="form-control"
                     type='text'
-                    id='hubName' 
-                    name='hubName' 
-                    value={wheel.hubName} 
+                    id='spokeName' 
+                    name='spokeName' 
+                    value={wheel.spokeName} 
                     onChange={handleChange} 
                 />
                 <p className=""> optional</p>

@@ -5,14 +5,14 @@ import About from '../../Pages/About'
 import Wheel from '../../Pages/Wheel'
 
 export default function Navigation() {
-  return (
-    <Router>          
+  return ( 
+    <Router>        
       <div>
         <ul className='nav nav-pills'>
           <li className='nav-item'>
             <Link to="/" className='nav-link'>Home</Link>
           </li>
-          <li><Link to="/wheel" className='nav-link'>Wheel</Link></li>
+          <li><Link to="/wheel" className='nav-link active'>Wheel</Link></li>
           <li><Link to="/about" className='nav-link'>About</Link></li>
         </ul>
         <Switch>  
@@ -21,6 +21,6 @@ export default function Navigation() {
           <Route path='/about'><About /></Route>
         </Switch>
       </div>
-    </Router>
+    </Router>  
   )
 }

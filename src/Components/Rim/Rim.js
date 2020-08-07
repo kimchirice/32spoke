@@ -1,23 +1,23 @@
 import React,{ useContext } from 'react'
 import { WheelContext } from '../../Context/WheelContext'
 
-export default function Hub() {
+const Rim = () =>{
   const {wheel, handleChange} = useContext(WheelContext);
   
     return (            
       <div>
-        <h3>Hub details</h3>
+        <h3>Rim details</h3>
         <form class="">
-          <fieldset id="form--hub">
+          <fieldset id="form--rim">
             <div className="form-row">
               <div className="form-group col-md-7">
-                <label class="form-label" htmlFor="hubName">Hub Name</label>
+                <label class="form-label" htmlFor="rimName">Rim Name</label>
                 <input 
                     className="form-control"
                     type='text'
-                    id='hubName' 
-                    name='hubName' 
-                    value={wheel.hubName} 
+                    id='rimName' 
+                    name='rimName' 
+                    value={wheel.rimName} 
                     onChange={handleChange} 
                 />
                 <p className=""> optional</p>
@@ -29,3 +29,5 @@ export default function Hub() {
       </div>
     );
 }
+
+export default Rim
