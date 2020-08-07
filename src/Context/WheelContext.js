@@ -1,9 +1,8 @@
-import React, { Children } from 'react'
-import { createContext } from 'react'
+import React, { useState, createContext } from 'react'
 
 const WheelContext = createContext()
 
-function WheelContextProvider({children}) {
+const WheelContextProvider = ({children}) => {
   const initialWheelValue = {
     hubName: '',
     rimName: '',
@@ -11,6 +10,7 @@ function WheelContextProvider({children}) {
   }
 
   const [currentStep, setCurrentStep] = useState(1)
+  console.log(currentStep)
   const [wheel, setWheel] = useState(initialWheelValue)
 
   function handleChange(e) {
@@ -19,12 +19,39 @@ function WheelContextProvider({children}) {
       ...wheel,
       [name]: value
     })
+    return wheel
+  }
+
+  function handleClickPrev(e) {
+    e.preventDefault();
+    if (currentStep >= 2) {
+      setCurrentStep(prev => prev -= 1)
+    }
+    return currentStep
+  }
+
+  function handleClickNext(e) {
+    e.preventDefault();
+    if (currentStep >= 1 && currentStep < 3) {
+      setCurrentStep(prev => prev += 1)
+    }
+    return currentStep
+  }
+
+  function handleClickCalculate(e) {
+    e.preventDefault();
+    alert(`Yeah, got all the data`)
   }
 
   return (
-    <WheelContextProvider value={{currentStep, wheel, handleChange}}>
+    <WheelContext.Provider 
+      value={{currentStep, wheel, handleChange, 
+        handleClickPrev, 
+        handleClickNext, 
+        handleClickCalculate}}
+    >
       {children}
-    </WheelContextProvider>
+    </WheelContext.Provider>
   )
 }
 
