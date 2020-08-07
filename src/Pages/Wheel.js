@@ -6,7 +6,6 @@ import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
 import {WheelContext} from '../Context/WheelContext'
 
 const Wheel = () => {
-  
   const {currentStep, handleClickPrev, handleClickNext, handleClickCalculate } = useContext(WheelContext)
 
   const Steps = () => {
@@ -37,7 +36,7 @@ const Wheel = () => {
         )
       case 2:
         return(
-          <div>
+          <div className="d-flex jc-">
             <button onClick={handleClickPrev} type="button" className="btn btn-primary">❮ Previous</button>
             <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
           </div>);
@@ -61,8 +60,7 @@ const Wheel = () => {
     <div className="d-flex jc-center">
       <h4>Step {currentStep}</h4>
       <Steps />
-      <>
-      <Buttons /></>
+      <Buttons />
     </div>
   )
 }

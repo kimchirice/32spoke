@@ -19,7 +19,6 @@ const WheelContextProvider = ({children}) => {
       ...wheel,
       [name]: value
     })
-    return wheel
   }
 
   function handleClickPrev(e) {
