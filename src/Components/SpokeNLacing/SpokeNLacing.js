@@ -45,9 +45,8 @@ export default function SpokeNLacing() {
                   id='numberOfSpokes' 
                   name='numberOfSpokes' 
                   value={wheel.numberOfSpokes} 
-                  onChange={handleChange} 
-                >
-                  <option value="32">32</option>
+                  onChange={handleChange} >
+                  <option value="32" selected>32</option>
                   <option value="16">16</option>
                   <option value="18">18</option>
                   <option value="20">20</option>
