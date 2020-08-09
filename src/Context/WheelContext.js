@@ -3,20 +3,15 @@ import React, { useState, createContext } from 'react'
 const WheelContext = createContext()
 
 const WheelContextProvider = ({children}) => {
-  const initialWheelValue = {
-    hubName: '',
-    rimName: '',
-    spokeNmae: ''
-  }
+  const initialWheelValue = {}
 
   const [currentStep, setCurrentStep] = useState(1)
   const [wheel, setWheel] = useState(initialWheelValue)
 
   function handleChange(event) {
     const { name, value } = event.target;
-    let newWheel = Object.assign({}, wheel)
-    newWheel[name] = value;
-    setWheel(newWheel);
+    wheel[name] = value;
+    setWheel(wheel);
   }
 
   function handleClickPrev(e) {
