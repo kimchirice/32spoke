@@ -7,6 +7,11 @@
   min-height: 100vh;
 }
 
+button, input, select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
