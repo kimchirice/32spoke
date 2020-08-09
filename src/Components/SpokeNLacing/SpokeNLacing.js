@@ -46,12 +46,13 @@ export default function SpokeNLacing() {
                   name='numberOfSpokes' 
                   value={wheel.numberOfSpokes} 
                   onChange={handleChange} >
-                  <option value="32" selected>32</option>
+                  
                   <option value="16">16</option>
                   <option value="18">18</option>
                   <option value="20">20</option>
                   <option value="24">24</option>
                   <option value="28">28</option>
+                  <option value="32" selected>32</option>
                 </select>
                     
               </div>
