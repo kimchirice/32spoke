@@ -7,11 +7,11 @@ const Rim = () =>{
     return (            
       <div>
         <h3>Rim details</h3>
-        <form class="">
+        <form >
           <fieldset id="form--rim">
             <div className="form-row">
               <div className="form-group col-md-7">
-                <label class="form-label" htmlFor="rimName">Rim Name</label>
+                <label className="form-label" htmlFor="rimName">Rim Name</label>
                 <input 
                     className="form-control"
                     type='text'

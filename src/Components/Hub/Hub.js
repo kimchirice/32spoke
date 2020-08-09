@@ -7,11 +7,11 @@ export default function Hub() {
     return (            
       <div>
         <h3>Hub details</h3>
-        <form class="">
+        <form >
           <fieldset id="form--hub">
             <div className="form-row">
               <div className="form-group col-md-7">
-                <label class="form-label" htmlFor="hubName">Hub Name</label>
+                <label className="form-label" htmlFor="hubName">Hub Name</label>
                 <input 
                     className="form-control"
                     type='text'
@@ -24,7 +24,6 @@ export default function Hub() {
               </div>
             </div>
           </fieldset>
-          
         </form>
       </div>
     );

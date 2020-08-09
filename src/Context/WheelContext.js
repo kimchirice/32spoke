@@ -15,6 +15,7 @@ const WheelContextProvider = ({children}) => {
 
   function handleChange(e) {
     const { name, value } = e.target;
+    console.log(`name is ${name} while value is ${value}`)
     setWheel({
       ...wheel,
       [name]: value

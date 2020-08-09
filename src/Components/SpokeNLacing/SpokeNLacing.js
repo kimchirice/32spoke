@@ -8,11 +8,11 @@ export default function SpokeNLacing() {
   return (            
       <div>
         <h3>Spoke & Lacing</h3>
-        <form class="">
+        <form >
           <fieldset id="form--spokeNLacing">
             <div className="form-row">
               <div className="form-group col-md-7">
-                <label class="form-label" htmlFor="spokeName">Spoke Name</label>
+                <label className="form-label" htmlFor="spokeName">Spoke Name</label>
                 <input 
                     className="form-control"
                     type='text'
