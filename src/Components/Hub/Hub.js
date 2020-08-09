@@ -50,6 +50,58 @@ export default function Hub() {
                 />
               </div>
             </div>
+            <div className="form-row">
+              <div className="form-group ">
+                <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
+                <input 
+                    className="form-control"
+                    type='text'
+                    id='leftFlangeDiameter' 
+                    name='leftFlangeDiameter' 
+                    value={wheel.leftFlangeDiameter} 
+                    onChange={handleChange} 
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group ">
+                <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
+                <input 
+                    className="form-control"
+                    type='text'
+                    id='rightFlangeDiameter' 
+                    name='rightFlangeDiameter' 
+                    value={wheel.rightFlangeDiameter} 
+                    onChange={handleChange} 
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group ">
+                <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
+                <input 
+                    className="form-control"
+                    type='text'
+                    id='leftFlangeToCenter' 
+                    name='leftFlangeToCenter' 
+                    value={wheel.leftFlangeToCenter} 
+                    onChange={handleChange} 
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group ">
+                <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
+                <input 
+                    className="form-control"
+                    type='text'
+                    id='rightFlangeToCenter' 
+                    name='rightFlangeToCenter' 
+                    value={wheel.rightFlangeToCenter} 
+                    onChange={handleChange} 
+                />
+              </div>
+            </div>
 
 
               
