@@ -6,20 +6,17 @@ const WheelContextProvider = ({children}) => {
   const initialWheelValue = {
     hubName: '',
     rimName: '',
-    spokeName: ''
+    spokeNmae: ''
   }
 
   const [currentStep, setCurrentStep] = useState(1)
-  console.log(currentStep)
   const [wheel, setWheel] = useState(initialWheelValue)
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    console.log(`name is ${name} while value is ${value}`)
-    setWheel({
-      ...wheel,
-      [name]: value
-    })
+  function handleChange(event) {
+    const { name, value } = event.target;
+    let newWheel = Object.assign({}, wheel)
+    newWheel[name] = value;
+    setWheel(newWheel);
   }
 
   function handleClickPrev(e) {
@@ -52,7 +49,7 @@ const WheelContextProvider = ({children}) => {
     >
       {children}
     </WheelContext.Provider>
-  )
+  );
 }
 
 export { WheelContext, WheelContextProvider }

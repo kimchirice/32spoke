@@ -31,6 +31,7 @@ const Wheel = () => {
       case 1: 
         return(
           <div>
+            <div></div>
             <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
           </div>
         )

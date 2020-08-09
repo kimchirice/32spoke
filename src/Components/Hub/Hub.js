@@ -4,6 +4,7 @@ import { WheelContext } from '../../Context/WheelContext'
 export default function Hub() {
   const {wheel, handleChange} = useContext(WheelContext);
   
+
     return (            
       <div>
         <h3>Hub details</h3>
@@ -36,6 +37,21 @@ export default function Hub() {
                 />
               </div>
             </div>
+            <div className="form-row">
+              <div className="form-group ">
+                <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
+                <input 
+                    className="form-control"
+                    type='text'
+                    id='spokeHoleDiameter' 
+                    name='spokeHoleDiameter' 
+                    value={wheel.spokeHoleDiameter} 
+                    onChange={handleChange} 
+                />
+              </div>
+            </div>
+
+
               
 
             
