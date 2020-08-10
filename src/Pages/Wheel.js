@@ -1,12 +1,32 @@
-import React, {useContext} from 'react'
+import React, {useState} from 'react'
 import Hub from '../Components/Hub/Hub'
 import Rim from '../Components/Rim/Rim'
 import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
 
-import {WheelContext} from '../Context/WheelContext'
 
 const Wheel = () => {
-  const {currentStep, handleClickPrev, handleClickNext, handleClickCalculate } = useContext(WheelContext)
+  // function currentStep() {},
+  const [currentStep, setCurrentStep] = useState(1)
+
+  function handleClickCalculate(e) {
+    e.preventDefault();
+    alert(`Yeah, got all the data`)
+  }
+  function handleClickPrev(e) {
+    e.preventDefault();
+    if (currentStep >= 2) {
+      setCurrentStep(prev => prev -= 1)
+    }
+    return currentStep
+  }
+
+  function handleClickNext(e) {
+    e.preventDefault();
+    if (currentStep >= 1 && currentStep < 3) {
+      setCurrentStep(prev => prev += 1)
+    }
+    return currentStep
+  }
 
   const Steps = () => {
     switch(currentStep) {
