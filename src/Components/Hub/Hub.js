@@ -4,113 +4,60 @@ import Input from '../Input/Input'
 export default function Hub(props) {
   // const {wheel, handleChange} = useContext(WheelContext);
   // how to pass the function handleChange() from Wheel to Hub, then add it to input and select components
-  
-
     return (            
       <div>
         <h3>Hub details</h3>
         <form >
           <fieldset id="form--hub">
             <Input 
-
+              inputType={'text'}
+              title={"Hub name"}
+              name={'hubName'}
+              value={props.hubName}
+              handleChange={props.handleChange}
             />
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="hubName">Hub Name</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='hubName' 
-                    name='hubName' 
-                    value={wheel.hubName} 
-                    onChange={props.handleChange} 
-                />
-                <p className=""> optional</p>
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="hubWeight">Hub weight</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='hubWeight' 
-                    name='hubWeight' 
-                    value={wheel.hubWeight} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='spokeHoleDiameter' 
-                    name='spokeHoleDiameter' 
-                    value={wheel.spokeHoleDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='leftFlangeDiameter' 
-                    name='leftFlangeDiameter' 
-                    value={wheel.leftFlangeDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rightFlangeDiameter' 
-                    name='rightFlangeDiameter' 
-                    value={wheel.rightFlangeDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='leftFlangeToCenter' 
-                    name='leftFlangeToCenter' 
-                    value={wheel.leftFlangeToCenter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rightFlangeToCenter' 
-                    name='rightFlangeToCenter' 
-                    value={wheel.rightFlangeToCenter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-
-
-              
-
-            
+            <Input 
+              inputType={'text'}
+              title={"Hub weight"}
+              name={'hubWeight'}
+              value={props.hubWeight}
+              handleChange={props.handleChange}
+            />
+            <Input  
+              inputType={'text'}
+              title={"Spoke hole diameter"}
+              name={'spokeHoleDiameter'}
+              value={props.spokeHoleDiameter}
+              handleChange={props.handleChange}
+            />
+             <Input  
+              inputType={'text'}
+              title={"Left Flange diameter"}
+              name={'leftFlangeDiameter'}
+              value={props.leftFlangeDiameter}
+              handleChange={props.handleChange}
+            />
+            <Input  
+              inputType={'text'}
+              title={"Right Flange diameter"}
+              name={'rightFlangeDiameter'}
+              value={props.rightFlangeDiameter}
+              handleChange={props.handleChange}
+            />
+             <Input  
+              inputType={'text'}
+              title={"Left Flange to Center"}
+              name={'leftFlangeToCenter'}
+              value={props.leftFlangeToCenter}
+              handleChange={props.handleChange}
+            />
+             <Input  
+              inputType={'text'}
+              title={"Right Flange to Center"}
+              name={'rightFlangeToCenter'}
+              value={props.rightFlangeToCenter}
+              handleChange={props.handleChange}
+            />
           </fieldset>
         </form>
       </div>

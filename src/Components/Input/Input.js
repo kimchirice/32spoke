@@ -12,8 +12,8 @@ const Input = props => {
             type={props.inputType}
             id={props.name} 
             name={props.name}
-            value={props.value} 
-            onChange={this.props.handleChange}
+            value={props.name} 
+            onChange={props.handleChange}
             {...props}
         />
       </div>

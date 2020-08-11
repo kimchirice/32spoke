@@ -11,6 +11,9 @@ const Wheel = () => {
   const initialWheelValue = {}
   const [wheel, setWheel]=useState(initialWheelValue)
 
+  const optionsNumberOfSpokes = [14, 16, 18, 20, 24, 28, 32, 36]
+  const options
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     wheel[name] = value;

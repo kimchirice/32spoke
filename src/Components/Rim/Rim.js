@@ -1,81 +1,47 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React from 'react'
+import Input from '../Input/Input'
 
-const Rim = () =>{
-  const {wheel, handleChange} = useContext(WheelContext);
-  
+const Rim = (props) =>{
     return (            
       <div>
         <h3>Rim details</h3>
         <form >
           <fieldset id="form--rim">
-            <div className="form-row">
-              <div className="form-group">
-                <label className="form-label" htmlFor="rimName">Rim Name</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rimName' 
-                    name='rimName' 
-                    value={wheel.rimName} 
-                    onChange={handleChange} 
-                />
-                <p className=""> optional</p>
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rimWeight">Rim Weight</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rimWeight' 
-                    name='rimWeight' 
-                    value={wheel.rimWeight} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rimERD">Rim E.R.D</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rimERD' 
-                    name='rimERD' 
-                    value={wheel.rimERD} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="offsetSpokeBed">Offset Spoke Bed</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='offsetSpokeBed' 
-                    name='offsetSpokeBed' 
-                    value={wheel.offsetSpokeBed} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="maxRimTension">Max Rim Tension</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='maxRimTension' 
-                    name='maxRimTension' 
-                    value={wheel.maxRimTension} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-
+            <Input 
+              inputType={'text'}
+              title={"Rim name"}
+              name={'rimName'}
+              value={props.rimName}
+              handleChange={props.handleChange}
+            />
+            <Input 
+              inputType={'text'}
+              title={"Rim weight"}
+              name={'rimWeight'}
+              value={props.rimWeight}
+              handleChange={props.handleChange}
+            />
+             <Input 
+              inputType={'text'}
+              title={"Rim ERD"}
+              name={'rimERD'}
+              value={props.rimERD}
+              handleChange={props.handleChange}
+            />
+             <Input 
+              inputType={'text'}
+              title={"Offset Spoke Bed"}
+              name={'offsetSpokeBed'}
+              value={props.offsetSpokeBed}
+              handleChange={props.handleChange}
+            />
+             <Input 
+              inputType={'text'}
+              title={"Max Rim Tension"}
+              name={'maxRimTension'}
+              value={props.maxRimTension}
+              handleChange={props.handleChange}
+            />
           </fieldset>
           
         </form>
