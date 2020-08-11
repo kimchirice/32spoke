@@ -1,25 +1,34 @@
 import React from 'react'
 
-const Input = props => {
+const Select = (props) => {
   return (
     <div className="form-row">
       <div className="form-group ">
         <label className="form-label" htmlFor={props.name}>
           {props.title}
         </label>
-        <input 
+        <select 
             className="form-control"
-            type={props.inputType}
             id={props.name} 
             name={props.name}
             value={props.value} 
             onChange={this.props.handleChange}
-            {...props}
-        />
+        >
+          <option value="" disabled>
+          </option>
+          {props.options.map(option => {
+            return (
+              <option 
+                key={option}
+                value={option}
+                label={option}>
+                  {option}
+              </option>
+            );
+          })}
+        </select>
       </div>
     </div>
   )
 }
-
-
-export default Input
+export default Select

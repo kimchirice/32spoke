@@ -11,17 +11,17 @@ const Wheel = () => {
   const initialWheelValue = {}
   const [wheel, setWheel]=useState(initialWheelValue)
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     const { name, value } = event.target;
     wheel[name] = value;
     setWheel(wheel);
   }
 
-  function handleClickCalculate(e) {
+  const handleClickCalculate = (e) => {
     e.preventDefault();
     alert(`Yeah, got all the data`)
   }
-  function handleClickPrev(e) {
+  const handleClickPrev= (e) => {
     e.preventDefault();
     if (currentStep >= 2) {
       setCurrentStep(prev => prev -= 1)
@@ -29,7 +29,7 @@ const Wheel = () => {
     return currentStep
   }
 
-  function handleClickNext(e) {
+  const handleClickNext = (e) => {
     e.preventDefault();
     if (currentStep >= 1 && currentStep < 3) {
       setCurrentStep(prev => prev += 1)
@@ -41,15 +41,15 @@ const Wheel = () => {
     switch(currentStep) {
       case 1: 
         return (
-          <Hub/>
+          <Hub wheel={wheel} onChange={handleChange}/>
         );
       case 2: 
-          return(<Rim />)
+          return(<Rim wheel={wheel} onChange={handleChange}/>)
       case 3: 
-        return( <SpokeNLacing />)
+        return( <SpokeNLacing wheel={wheel} onChange={handleChange}/>)
       default:
         return (
-          <Hub/>
+          <Hub onChange={handleChange}/>
         );
     }
   }
@@ -60,7 +60,6 @@ const Wheel = () => {
       case 1: 
         return(
           <div>
-            <div></div>
             <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
           </div>
         )

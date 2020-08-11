@@ -1,8 +1,9 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React from 'react'
+import Input from '../Input/Input'
 
-export default function Hub() {
-  const {wheel, handleChange} = useContext(WheelContext);
+export default function Hub(props) {
+  // const {wheel, handleChange} = useContext(WheelContext);
+  // how to pass the function handleChange() from Wheel to Hub, then add it to input and select components
   
 
     return (            
@@ -10,6 +11,9 @@ export default function Hub() {
         <h3>Hub details</h3>
         <form >
           <fieldset id="form--hub">
+            <Input 
+
+            />
             <div className="form-row">
               <div className="form-group ">
                 <label className="form-label" htmlFor="hubName">Hub Name</label>
@@ -19,7 +23,7 @@ export default function Hub() {
                     id='hubName' 
                     name='hubName' 
                     value={wheel.hubName} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
                 <p className=""> optional</p>
               </div>
