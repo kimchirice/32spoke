@@ -14,8 +14,7 @@ const Select = (props) => {
             value={props.value} 
             onChange={props.handleChange}
         >
-          <option value="" disabled>
-          </option>
+          <option value="" disabled></option>
           {props.options.map(option => {
             return (
               <option 

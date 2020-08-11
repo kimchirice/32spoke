@@ -54,10 +54,10 @@ const Wheel = () => {
                   onChange={handleChange}
                   optionsLacingPattern={optionsLacingPattern}
                   optionsNumberOfSpokes={optionsNumberOfSpokes}
-                  />)
+                />);
       default:
         return (
-          <Hub onChange={handleChange}/>
+          <Hub wheel={wheel} onChange={handleChange}/>
         );
     }
   }
