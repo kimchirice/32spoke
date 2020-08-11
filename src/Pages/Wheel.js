@@ -7,6 +7,15 @@ import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
 const Wheel = () => {
   // function currentStep() {},
   const [currentStep, setCurrentStep] = useState(1)
+  
+  const initialWheelValue = {}
+  const [wheel, setWheel]=useState(initialWheelValue)
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    wheel[name] = value;
+    setWheel(wheel);
+  }
 
   function handleClickCalculate(e) {
     e.preventDefault();
