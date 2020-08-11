@@ -12,7 +12,7 @@ const Wheel = () => {
   const [wheel, setWheel]=useState(initialWheelValue)
 
   const optionsNumberOfSpokes = [14, 16, 18, 20, 24, 28, 32, 36]
-  const options
+  const optionsLacingPattern = [0, 1, 2, 3, 4]
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -49,7 +49,12 @@ const Wheel = () => {
       case 2: 
           return(<Rim wheel={wheel} onChange={handleChange}/>)
       case 3: 
-        return( <SpokeNLacing wheel={wheel} onChange={handleChange}/>)
+        return( <SpokeNLacing 
+                  wheel={wheel} 
+                  onChange={handleChange}
+                  optionsLacingPattern={optionsLacingPattern}
+                  optionsNumberOfSpokes={optionsNumberOfSpokes}
+                  />)
       default:
         return (
           <Hub onChange={handleChange}/>

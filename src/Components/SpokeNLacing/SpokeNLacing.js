@@ -26,43 +26,25 @@ const SpokeNLacing = (props) => {
             <Select 
               title={"Number of spokes"}
               name={"numberOfSpokes"}
+              options={props.optionsNumberOfSpokes}
               value={props.wheel.numberOfSpokes}
               handleChange={props.handleChange}
-              
-              <option value="16">16</option>
-                  <option value="18">18</option>
-                  <option value="20">20</option>
-                  <option value="24">24</option>
-                  <option value="28">28</option>
-                  <option value="32" selected>32</option>
-            />
-
+               />
             <Select 
               title={"Lacing pattern left"}
               name={"lacingPatternLeft"}
+              options={props.optionsLacingPatter}
               value={props.wheel.lacingPatternLeft}
               handleChange={props.handleChange}
-
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3" selected>3</option>
-              <option value="4">4</option>
-                 
-            />
+               />
             <Select 
               title={"Lacing pattern left"}
               name={"lacingPatternRight"}
+              options={props.optionsLacingPatter}
               value={props.wheel.lacingPatternRight}
               handleChange={props.handleChange}
-
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3" selected>3</option>
-              <option value="4">4</option>
-                 
-            />
+               />
+   ]
           </fieldset>
         </form>
       </div>

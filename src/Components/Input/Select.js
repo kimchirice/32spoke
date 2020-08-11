@@ -12,7 +12,7 @@ const Select = (props) => {
             id={props.name} 
             name={props.name}
             value={props.value} 
-            onChange={this.props.handleChange}
+            onChange={props.handleChange}
         >
           <option value="" disabled>
           </option>
