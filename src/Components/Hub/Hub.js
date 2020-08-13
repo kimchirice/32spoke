@@ -1,9 +1,10 @@
 import React from 'react'
 import Input from '../Input/Input'
 
-export default function Hub(props) {
+const Hub = (props) => {
   // const {wheel, handleChange} = useContext(WheelContext);
   // how to pass the function handleChange() from Wheel to Hub, then add it to input and select components
+    console.log(props);
     return (            
       <div>
         <h3>Hub details</h3>
@@ -63,3 +64,5 @@ export default function Hub(props) {
       </div>
     );
 }
+
+export default Hub;
