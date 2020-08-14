@@ -94,7 +94,7 @@ const Wheel = () => {
   
   
   return (
-    <div className="d-flex flex-column justify-content-center align-items-start">
+    <div className="d-flex flex-column align-items-start">
       <h4>Step {currentStep}</h4>
       <Steps />
       <Buttons />

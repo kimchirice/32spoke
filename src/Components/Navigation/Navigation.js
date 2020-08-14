@@ -8,7 +8,7 @@ export default function Navigation() {
   return ( 
     <Router>        
       <div className="container">
-        <ul className='nav navbar nav-pills bg-dark'>
+        <ul className='nav navbar nav-pills bg-dark justify-content-start'>
           <li className='nav-item'>
             <NavLink exact to="/" className='nav-link text-white' activeClassName="active">Home</NavLink>
           </li>
