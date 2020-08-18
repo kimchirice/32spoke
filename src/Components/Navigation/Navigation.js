@@ -12,7 +12,7 @@ export default function Navigation() {
           <li className='nav-item'>
             <Link to="/" className='nav-link'>Home</Link>
           </li>
-          <li><Link to="/wheel" className='nav-link active'>Wheel</Link></li>
+          <li><Link to="/wheel" className='nav-link'>Wheel</Link></li>
           <li><Link to="/about" className='nav-link'>About</Link></li>
         </ul>
         <Switch>  
