@@ -35,7 +35,8 @@ export default function SpokeNLacing() {
                     id='spokeWeight' 
                     name='spokeWeight' 
                     value={wheel.spokeWeight} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    autoFocus 
                 />
               </div>
             </div>

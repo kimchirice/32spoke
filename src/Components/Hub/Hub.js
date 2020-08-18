@@ -19,7 +19,8 @@ export default function Hub() {
                     id='hubName' 
                     name='hubName' 
                     value={wheel.hubName} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                    autoFocus 
                 />
                 <p className=""> optional</p>
               </div>
