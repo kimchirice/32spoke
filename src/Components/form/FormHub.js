@@ -1,11 +1,7 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React,{  } from 'react'
 
 
-export default function Hub() {
-  const {wheel, handleChange} = useContext(WheelContext);
-  
-
+export default function Hub(props) {  
     return (            
       <div>
         <h3>Hub details</h3>
@@ -19,8 +15,8 @@ export default function Hub() {
                     type='text'
                     id='hubName' 
                     name='hubName' 
-                    value={wheel.hubName} 
-                    onChange={handleChange}
+                    value={props.wheel.hubName} 
+                    onChange={props.handleChange}
                     autoFocus 
                 />
                 <p className=""> optional</p>
@@ -35,7 +31,7 @@ export default function Hub() {
                     id='hubWeight' 
                     name='hubWeight' 
                     value={wheel.hubWeight} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -48,7 +44,7 @@ export default function Hub() {
                     id='spokeHoleDiameter' 
                     name='spokeHoleDiameter' 
                     value={wheel.spokeHoleDiameter} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -61,7 +57,7 @@ export default function Hub() {
                     id='leftFlangeDiameter' 
                     name='leftFlangeDiameter' 
                     value={wheel.leftFlangeDiameter} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -74,7 +70,7 @@ export default function Hub() {
                     id='rightFlangeDiameter' 
                     name='rightFlangeDiameter' 
                     value={wheel.rightFlangeDiameter} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -87,7 +83,7 @@ export default function Hub() {
                     id='leftFlangeToCenter' 
                     name='leftFlangeToCenter' 
                     value={wheel.leftFlangeToCenter} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -100,7 +96,7 @@ export default function Hub() {
                     id='rightFlangeToCenter' 
                     name='rightFlangeToCenter' 
                     value={wheel.rightFlangeToCenter} 
-                    onChange={handleChange} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>

@@ -1,14 +1,44 @@
-import React, {useContext} from 'react'
+import React, {Component} from 'react'
 import Hub from '../Components/Hub/Hub'
 import Rim from '../Components/Rim/Rim'
 import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
 
-import {WheelContext} from '../Context/WheelContext'
+class Wheel extends Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      currentStep: 1,
+      wheel: {},
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClickNext = this.handleClickNext.bind(this);
+    this.handleClickPrev = this.handleClickPrev.bind(this);
+    this.handleClickCalculate = this.handleClickCalculate.bind(this);
+  }
 
-const Wheel = () => {
-  const {currentStep, handleClickPrev, handleClickNext, handleClickCalculate } = useContext(WheelContext)
+  handleChange(event){
+    const { name, value } = event.target;
+    this.setState(wheel);
+  }
 
-  const Steps = () => {
+  handleClickCalculate() {
+    
+  }
+  
+  handleClickNext(e) {
+    if (this.state.currentStep >= 1 && this.state.currentStep < 3) {
+      this.setState(prevState => prevState.currentStep += 1)
+    }
+  }
+  handleClickPrev(e) {
+    e.preventDefault();
+    if (this.state.currentStep >= 2) {
+      this.setState(prev => prev.currentStep -= 1)
+    }
+  }
+
+
+  Steps() {
     switch(currentStep) {
       case 1: 
         return (
@@ -26,7 +56,7 @@ const Wheel = () => {
   }
   
   
-  const Buttons= () => {
+  Buttons= () => {
     switch (currentStep) {
       case 1: 
         return(
@@ -56,14 +86,15 @@ const Wheel = () => {
     }
   }
   
-  
-  return (
-    <div className="d-flex flex-column justify-content-center align-items-start">
-      <h4>Step {currentStep}</h4>
-      <Steps />
-      <Buttons />
-    </div>
-  )
+  render() {
+    return (
+      <div className="d-flex flex-column justify-content-center align-items-start">
+        <h4>Step {currentStep}</h4>
+        <Steps />
+        <Buttons />
+      </div>
+    )
+  }
 }
 
 export default Wheel
