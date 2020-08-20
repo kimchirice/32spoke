@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FormContainer from '../Components/form/FormContainer'
 export default function Home() {
 
   return (
@@ -7,7 +7,7 @@ export default function Home() {
       <h3>This is home page of 32spoke</h3>
 
         <div className="progress-bar bg-success" role="progressbar" style={{width: '25%'}} aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-   
+        <FormContainer />
     </div>
   );
 }

@@ -16,9 +16,9 @@ class FormContainer extends Component {
     this.handleClickCalculate = this.handleClickCalculate.bind(this);
   }
 
-  handleChange(event){
+  handleChange(event) {
     const { name, value } = event.target;
-    this.setState((wheel) => {
+    this.setState({
       wheel: {
         ...this.state.wheel, 
         name: value,
@@ -38,63 +38,61 @@ class FormContainer extends Component {
   handleClickPrev(e) {
     e.preventDefault();
     if (this.state.currentStep >= 2) {
-      this.setState(prev => prev.currentStep -= 1)
+      this.setState(prevState => prevState.currentStep -= 1)
     }
   }
 
-
-  Steps() {
-    switch(currentStep) {
-      case 1: 
-        return (
-          <Hub/>
-        );
-      case 2: 
-          return(<Rim />)
-      case 3: 
-        return( <SpokeNLacing />)
-      default:
-        return (
-          <Hub/>
-        );
-    }
-  }
-  
-  
-  Buttons= () => {
-    switch (currentStep) {
-      case 1: 
-        return(
-          <div>
-            <div></div>
-            <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
-          </div>
-        )
-      case 2:
-        return(
-          <div className="d-flex jc-">
-            <button onClick={handleClickPrev} type="button" className="btn btn-primary">❮ Previous</button>
-            <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
-          </div>);
-      case 3:
-        return(
-          <div>
-            <button onClick={handleClickPrev} type="button" className="btn btn-primary">❮ Previous</button>
-            <button onClick={handleClickCalculate} type="button" className="btn btn-warning">Calculate</button>
-          </div>);
-      default:
-        return(
-          <div>
-            <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
-          </div>
-        )
-    }
-  }
-  
   render() {
+    const Steps = () => {
+      switch(this.state.currentStep) {
+        case 1: 
+          return (
+            <Hub onChange={this.handleChange} wheel={this.state.wheel} />
+          );
+        case 2: 
+            return(<Rim onChange={this.handleChange} wheel={this.state.wheel} />)
+        case 3: 
+          return( <SpokeNLacing />)
+        default:
+          return (
+            <Hub/>
+          );
+      }
+    }
+    
+    
+    const Buttons = () => {
+      switch (this.state.currentStep) {
+        case 1: 
+          return (
+            <div>
+              <div></div>
+              <button onClick={this.handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
+            </div>
+          )
+        case 2:
+          return (
+            <div className="d-flex jc-">
+              <button onClick={this.handleClickPrev} type="button" className="btn btn-primary">❮ Previous</button>
+              <button onClick={this.handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
+            </div>);
+        case 3:
+          return (
+            <div>
+              <button onClick={this.handleClickPrev} type="button" className="btn btn-primary">❮ Previous</button>
+              <button onClick={this.handleClickCalculate} type="button" className="btn btn-warning">Calculate</button>
+            </div>);
+        default:
+          return (
+            <div>
+              <button onClick={this.handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
+            </div>
+          )
+      }
+    }
     return (
       <div className="d-flex flex-column justify-content-center align-items-start">
-        <h4>Step {currentStep}</h4>
+        <h4>Step {this.state.currentStep}</h4>
         <Steps />
         <Buttons />
       </div>
@@ -102,4 +100,4 @@ class FormContainer extends Component {
   }
 }
 
-export default Wheel
+export default FormContainer

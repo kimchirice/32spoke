@@ -2,6 +2,9 @@ import React,{  } from 'react'
 
 
 export default function Hub(props) {  
+    const {handleChange,  wheel } = props
+    console.log(wheel)
+    console.log(handleChange)
     return (            
       <div>
         <h3>Hub details</h3>
@@ -22,7 +25,7 @@ export default function Hub(props) {
                 <p className=""> optional</p>
               </div>
             </div>
-            <div className="form-row">
+            {/* <div className="form-row">
               <div className="form-group ">
                 <label className="form-label" htmlFor="hubWeight">Hub weight</label>
                 <input 
@@ -102,7 +105,7 @@ export default function Hub(props) {
             </div>
 
 
-              
+               */}
 
             
           </fieldset>

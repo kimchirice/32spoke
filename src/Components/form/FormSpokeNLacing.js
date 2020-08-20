@@ -1,8 +1,7 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React from 'react'
 
-export default function SpokeNLacing() {
-  const {wheel, handleChange} = useContext(WheelContext);
+
+export default function SpokeNLacing(props) {
   return (            
       <div>
         <h3>Spoke & Lacing</h3>
@@ -13,12 +12,12 @@ export default function SpokeNLacing() {
                 <label className="col-form-label  col-sm-4" htmlFor="spokeName">Spoke Name</label>
                 <div className="col-md-8">
                 <input 
-                    className="form-control"
+          ß          className="form-control"
                     type='text'
                     id='spokeName' 
                     name='spokeName' 
-                    value={wheel.spokeName} 
-                    onChange={handleChange}
+                    value={props.wheel.spokeName} 
+                    onChange={props.handleChange}
                     autoFocus 
                 />
                   </div>
@@ -27,7 +26,7 @@ export default function SpokeNLacing() {
            
 
             
-            <div className="form-group row">
+            {/* <div className="form-group row">
               <label className="col-form-label  col-sm-4" htmlFor="spokeWeight">Spoke Weight(g.)</label>
               <div className="col-sm-8">  
                 <input 
@@ -100,7 +99,7 @@ export default function SpokeNLacing() {
                     <option value="4">x4</option>
                   </select>
                 </div>   
-              </div>
+              </div> */}
           </fieldset>
         </form>
       </div>

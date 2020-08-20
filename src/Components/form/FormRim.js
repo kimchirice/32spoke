@@ -1,8 +1,6 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React from 'react'
 
-const Rim = () =>{
-  const {wheel, handleChange} = useContext(WheelContext);
+const Rim = (props) =>{
   
     return (            
       <div>
@@ -17,14 +15,14 @@ const Rim = () =>{
                     type='text'
                     id='rimName' 
                     name='rimName' 
-                    value={wheel.rimName} 
-                    onChange={handleChange}
+                    value={props.wheel.rimName} 
+                    onChange={props.handleChange}
                     autoFocus 
                 />
                 <p className=""> optional</p>
               </div>
             </div>
-            <div className="form-row">
+            {/* <div className="form-row">
               <div className="form-group ">
                 <label className="form-label" htmlFor="rimWeight">Rim Weight</label>
                 <input 
@@ -32,8 +30,8 @@ const Rim = () =>{
                     type='text'
                     id='rimWeight' 
                     name='rimWeight' 
-                    value={wheel.rimWeight} 
-                    onChange={handleChange} 
+                    value={props.wheel.rimWeight} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -45,8 +43,8 @@ const Rim = () =>{
                     type='text'
                     id='rimERD' 
                     name='rimERD' 
-                    value={wheel.rimERD} 
-                    onChange={handleChange} 
+                    value={props.wheel.rimERD} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -58,8 +56,8 @@ const Rim = () =>{
                     type='text'
                     id='offsetSpokeBed' 
                     name='offsetSpokeBed' 
-                    value={wheel.offsetSpokeBed} 
-                    onChange={handleChange} 
+                    value={props.wheel.offsetSpokeBed} 
+                    onChange={props.handleChange} 
                 />
               </div>
             </div>
@@ -71,11 +69,11 @@ const Rim = () =>{
                     type='text'
                     id='maxRimTension' 
                     name='maxRimTension' 
-                    value={wheel.maxRimTension} 
-                    onChange={handleChange} 
+                    value={props.wheel.maxRimTension} 
+                    onChange={props.handleChange} 
                 />
               </div>
-            </div>
+            </div> */}
 
           </fieldset>
           
