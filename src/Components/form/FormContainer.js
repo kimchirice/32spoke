@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import Hub from '../Components/Hub/Hub'
-import Rim from '../Components/Rim/Rim'
-import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
+import Hub from './FormHub'
+import Rim from './FormRim'
+import SpokeNLacing from './FormSpokeNLacing'
 
-class Wheel extends Component {
+class FormContainer extends Component {
   constructor(props) {
     super(props);
     this.state={
@@ -18,7 +18,12 @@ class Wheel extends Component {
 
   handleChange(event){
     const { name, value } = event.target;
-    this.setState(wheel);
+    this.setState((wheel) => {
+      wheel: {
+        ...this.state.wheel, 
+        name: value,
+      }
+    });
   }
 
   handleClickCalculate() {
