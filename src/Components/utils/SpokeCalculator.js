@@ -11,8 +11,8 @@
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
 
   const angleCalculator = (k, m)=> {
-    // angle = 360° * k* 2 /m,  for example of  360°*3 /16 = 60°.
-        const angle = 360 * k  / m
+    // angle = 360° * k * 2/m,  for example of  360° * 3/16 = 60°.
+        const angle = 360 * k / m
         return angle
   }
 
