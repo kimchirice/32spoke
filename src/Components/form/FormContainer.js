@@ -8,7 +8,11 @@ class FormContainer extends Component {
     super(props);
     this.state={
       currentStep: 1,
-      wheel: {},
+      wheel: {
+        hubName: '',
+        rimName: '',
+        SpokeName: '',
+      },
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleClickNext = this.handleClickNext.bind(this);
@@ -52,7 +56,7 @@ class FormContainer extends Component {
         case 2: 
             return(<Rim onChange={this.handleChange} wheel={this.state.wheel} />)
         case 3: 
-          return( <SpokeNLacing />)
+          return( <SpokeNLacing onChange={this.handleChange} wheel={this.state.wheel}/>)
         default:
           return (
             <Hub/>

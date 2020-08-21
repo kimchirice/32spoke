@@ -19,7 +19,7 @@ export default function Hub(props) {
                     id='hubName' 
                     name='hubName' 
                     value={props.wheel.hubName} 
-                    onChange={props.handleChange}
+                    onChange={(e)=> props.handleChange(e)}
                     autoFocus 
                 />
                 <p className=""> optional</p>

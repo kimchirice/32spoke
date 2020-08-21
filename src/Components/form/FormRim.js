@@ -16,7 +16,7 @@ const Rim = (props) =>{
                     id='rimName' 
                     name='rimName' 
                     value={props.wheel.rimName} 
-                    onChange={props.handleChange}
+                    onChange={(e)=> props.handleChange(e)}
                     autoFocus 
                 />
                 <p className=""> optional</p>

@@ -17,7 +17,7 @@ export default function SpokeNLacing(props) {
                     id='spokeName' 
                     name='spokeName' 
                     value={props.wheel.spokeName} 
-                    onChange={props.handleChange}
+                    onChange={(e)=> props.handleChange(e)}
                     autoFocus 
                 />
                   </div>
