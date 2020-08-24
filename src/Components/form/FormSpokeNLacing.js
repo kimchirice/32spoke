@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export default function SpokeNLacing(props) {
   return (            
       <div>
