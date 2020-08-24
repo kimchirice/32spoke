@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Input(props) {
   return (
@@ -15,10 +14,6 @@ function Input(props) {
         />
       </div>
   )
-}
-
-Input.propTypes = {
-
 }
 
 export default Input

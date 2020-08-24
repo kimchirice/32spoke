@@ -1,30 +1,33 @@
-import React,{  } from 'react'
-
+import React from 'react'
+import Input from '../input/Input'
 
 export default function Hub(props) {  
-    const {handleChange,  wheel } = props
-    console.log(wheel)
-    console.log(handleChange)
     return (            
       <div>
         <h3>Hub details</h3>
         <form >
           <fieldset id="form--hub">
             <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="hubName">Hub Name</label>
-                <input 
+              <Input 
+                title={'Hub Name'}
+                id={'hubName'}
+                name={'hubName'}
+                value={props.value}
+                onChange={props.handleChange}
+                autoFocus
+              />
+                {/* <input 
                     className="form-control"
                     type='text'
                     id='hubName' 
                     name='hubName' 
-                    value={props.hubName} 
+                    value={props.wheel.hubName} 
                     onChange={props.handleChange}
                     autoFocus 
-                />
-                <p className=""> optional</p>
-              </div>
-            </div>
+                /> */}
+                {/* <p className=""> optional</p> */}
+              {/* </div> */}
+            </div> 
             {/* <div className="form-row">
               <div className="form-group ">
                 <label className="form-label" htmlFor="hubWeight">Hub weight</label>
