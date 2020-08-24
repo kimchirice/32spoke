@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
-import Home from '../../Pages/Home'
-import About from '../../Pages/About'
+import Home from '../../pages/Home'
+import About from '../../pages/About'
 
 export default function Navigation() {
   return ( 

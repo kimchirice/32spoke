@@ -1,5 +1,6 @@
 import React from 'react'
-import FormContainer from '../Components/form/FormContainer'
+import FormContainer from '../components/form/FormContainer'
+
 export default function Home() {
 
   return (
