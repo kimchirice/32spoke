@@ -27,12 +27,16 @@ function App() {
   }
 
   const handleButtonNext = () => {
-    setCurrentStep( preV => preV += 1)
+    if (currentStep < 4){
+      setCurrentStep( preV => preV += 1)
+    }
   }
 
   const handleButtonPrev = () => {
+    if (currentStep > 1){
+      setCurrentStep( preV => preV -= 1)
+    } 
     
-    setCurrentStep( preV => preV -= 1)
   }
 
   return (
@@ -44,12 +48,17 @@ function App() {
         {spokeName}
         <Navigation />
         <Progress currentStep={currentStep} />
+    { currentStep === 1 &&
+        <Hub handleChange={handleHubName} /> }
+    { currentStep === 2 && 
+      <Rim handleChange={handleRimName} />   
+    }    
+         
+    {currentStep === 3 &&  
+        <Spoke handleChange={handleSpokeName}/> }
 
-        <Hub handleChange={handleHubName} />
-        <Rim handleChange={handleRimName} />  
-        <Spoke handleChange={handleSpokeName}/>
-        <Button title={'Prev'} className="btn btn-primary" handleClick={handleButtonPrev} />
-        <Button title={"Next"} className="btn btn-warning" handleClick={handleButtonNext} />
+        { currentStep > 1 && <Button title={'Prev'} className="btn btn-primary" handleClick={handleButtonPrev} />}
+    { currentStep < 4 && <Button title={"Next"} className="btn btn-warning" handleClick={handleButtonNext} /> }
     </div>
   );
 }
