@@ -12,7 +12,7 @@ export default class FormContainer extends Component {
       wheel: {
         hubName: '',
         rimName: '',
-        SpokeName: '',
+        spokeName: '',
       },
     }
     this.handleChange = this.handleChange.bind(this);
