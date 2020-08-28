@@ -12,7 +12,7 @@ export default function Hub(props) {
                 title={'Hub Name'}
                 id={'hubName'}
                 name={'hubName'}
-                value={props.value}
+                value={props.wheel.hubName}
                 onChange={props.handleChange}
                 autoFocus
               />
