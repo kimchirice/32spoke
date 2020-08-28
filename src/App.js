@@ -9,13 +9,20 @@ import Button from './components/Button';
 
 
 function App() {
-  const [hubName, setHubName] = useState('')
+  const [hub, setHub] = useState({})
   const [rimName, setRimName] = useState('')
   const [spokeName, setSpokeName] = useState('')
   const [currentStep, setCurrentStep] = useState(1)
 
-  const handleHubName = (hubName) => {
-    setHubName(hubName)
+  const handleHub = (event) => {
+    let {name, value} = event.target
+    setHub(prevHub => (
+      {
+        ...prevHub,
+        name: value,
+      })
+    )
+    console.log(`the name is ${name}`)
   }
 
   const handleRimName = (rimName) => {
@@ -26,13 +33,15 @@ function App() {
     setSpokeName(spokeName)
   }
 
-  const handleButtonNext = () => {
+  const handleButtonNext = (e) => {
+    e.preventDefault()
     if (currentStep < 4){
       setCurrentStep( preV => preV += 1)
     }
   }
 
-  const handleButtonPrev = () => {
+  const handleButtonPrev = (e) => {
+    e.preventDefault()
     if (currentStep > 1){
       setCurrentStep( preV => preV -= 1)
     } 
@@ -41,15 +50,11 @@ function App() {
 
   return (
     <div className="App">
-        {hubName}
-        <br/>
-        {rimName}
-        <br/>
-        {spokeName}
+      {typeof(hub)}<br/>{rimName}<br/>{spokeName}
         <Navigation />
         <Progress currentStep={currentStep} />
     { currentStep === 1 &&
-        <Hub handleChange={handleHubName} /> }
+        <Hub handleChange={handleHub} /> }
     { currentStep === 2 && 
       <Rim handleChange={handleRimName} />   
     }    
