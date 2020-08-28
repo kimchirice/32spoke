@@ -25,6 +25,7 @@ export default class FormContainer extends Component {
 
   handleChange(event) {
     const {name, value} = event.target;
+    console.log(name);
     this.setState({
       wheel: {
         ...this.state.wheel, 
@@ -64,12 +65,12 @@ export default class FormContainer extends Component {
       switch(this.state.currentStep) {
         case 1: 
           return (
-            <Hub onChange={this.handleChange} wheel={this.state.wheel} />
+            <Hub handleChange={this.handleChange} wheel={this.state.wheel} />
           );
         case 2: 
-            return(<Rim onChange={this.handleChange} wheel={this.state.wheel} />)
+            return(<Rim handleChange={this.handleChange} wheel={this.state.wheel} />)
         case 3: 
-          return( <SpokeNLacing onChange={this.handleChange} wheel={this.state.wheel}/>)
+          return( <SpokeNLacing hancleChange={this.handleChange} wheel={this.state.wheel}/>)
         default:
           return (
             <Hub/>

@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Hub({handleChange}) {
+const Hub = ({handleChange}) => {
   return (
     <div >
       <label htmlFor="hubName">Hub Name</label>
-      <input 
+      <input
+        className="form-control" 
         type="text"
         id="hubName"
         name="hubName"
