@@ -10,7 +10,7 @@ const Rim = ({handleChange})=> {
         type='text'
         id="rimName"
         name='rimName'
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={handleChange}
         />
     </div>
 
@@ -21,7 +21,7 @@ const Rim = ({handleChange})=> {
           type='text'
           id='rimWeight' 
           name='rimWeight' 
-          onChange={(e) => handleChange(e.target.value)}          />
+          onChange={handleChange}          />
     </div>
    
       <div className="form-group ">
@@ -31,7 +31,7 @@ const Rim = ({handleChange})=> {
             type='text'
             id='rimERD' 
             name='rimERD' 
-            onChange={(e) => handleChange(e.target.value)}          />
+            onChange={handleChange}          />
       </div>
 
       <div className="form-group ">
@@ -41,7 +41,7 @@ const Rim = ({handleChange})=> {
             type='text'
             id='offsetSpokeBed' 
             name='offsetSpokeBed' 
-            onChange={(e) => handleChange(e.target.value)}          />
+            onChange={handleChange}          />
       </div>
       <div className="form-group ">
         <label className="form-label" htmlFor="maxRimTension">Max Rim Tension</label>
@@ -50,7 +50,7 @@ const Rim = ({handleChange})=> {
             type='text'
             id='maxRimTension' 
             name='maxRimTension' 
-            onChange={(e) => handleChange(e.target.value)}          />
+            onChange={handleChange}          />
       </div>
     </>
   )

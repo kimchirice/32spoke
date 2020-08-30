@@ -10,7 +10,7 @@ const Spoke = ({handleChange}) => {
           type='text'
           id="spokeName"
           name='spokeName'
-          onChange={(e)=> handleChange(e.target.value)}
+          onChange={handleChange}
         />
       </div>
       <div className="form-group">
@@ -20,7 +20,7 @@ const Spoke = ({handleChange}) => {
             type='text'
             id='spokeWeight' 
             name='spokeWeight' 
-            onChange={(e)=> handleChange(e.target.value)}
+            onChange={handleChange}
             />
       </div>
 

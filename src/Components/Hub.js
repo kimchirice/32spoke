@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Hub = ({handleChange}) => {
+  
   return (
     <>
       <div className="form-group">
@@ -10,7 +11,7 @@ const Hub = ({handleChange}) => {
           type="text"
           id="hubName"
           name="hubName"
-          onChange={(event) => handleChange(event)} 
+          onChange={handleChange} 
         />
       </div>
    
@@ -20,13 +21,13 @@ const Hub = ({handleChange}) => {
             className="form-control"
             type='text'
             id='hubWeight' 
-            name='hubWeight' 
-            onChange={(event) => handleChange(event)} 
+            name='hubWeight'
+            onChange={handleChange} 
         />
       </div>
     
     
-      <div className="form-group ">
+      {/* <div className="form-group ">
         <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
         <input 
             className="form-control"
@@ -79,7 +80,7 @@ const Hub = ({handleChange}) => {
             name='rightFlangeToCenter' 
             onChange={(event) => handleChange(event)} 
         />
-      </div>
+      </div> */}
     </>
   )
 }
