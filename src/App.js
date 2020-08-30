@@ -58,9 +58,9 @@ function App() {
     <div className="App">
       <Navigation />
       <Progress currentStep={currentStep} />
-      { currentStep === 1 && <Hub handleChange={handleParts} /> }
-      { currentStep === 2 && <Rim handleChange={handleParts} /> }
-      { currentStep === 3 && <Spoke handleChange={handleParts}/> }
+      { currentStep === 1 && <Hub handleChange={handleParts} parts={parts}/> }
+      { currentStep === 2 && <Rim handleChange={handleParts} parts={parts}/> }
+      { currentStep === 3 && <Spoke handleChange={handleParts} parts={parts}/> }
       { currentStep > 1 && <Button title={'Prev'} className="btn btn-primary" handleClick={handleButtonPrev} />}
       { currentStep < 4 && <Button title={"Next"} className="btn btn-warning" handleClick={handleButtonNext} /> }
     </div>

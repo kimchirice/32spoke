@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Hub = ({handleChange}) => {
-  
+const Hub = ({handleChange, parts}) => {
+  console.log()
   return (
     <>
       <div className="form-group">
@@ -11,6 +11,7 @@ const Hub = ({handleChange}) => {
           type="text"
           id="hubName"
           name="hubName"
+          value={parts.hubName}
           onChange={handleChange} 
         />
       </div>
@@ -22,19 +23,21 @@ const Hub = ({handleChange}) => {
             type='text'
             id='hubWeight' 
             name='hubWeight'
+            value={parts.hubWeight}
             onChange={handleChange} 
         />
       </div>
     
     
-      {/* <div className="form-group ">
+      <div className="form-group ">
         <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
         <input 
             className="form-control"
             type='text'
             id='spokeHoleDiameter' 
-            name='spokeHoleDiameter' 
-            onChange={(event) => handleChange(event)} 
+            name='spokeHoleDiameter'
+            value={parts.spokeHoleDiameter} 
+          onChange={handleChange} 
         />
       </div>
     
@@ -44,8 +47,9 @@ const Hub = ({handleChange}) => {
             className="form-control"
             type='text'
             id='leftFlangeDiameter' 
-            name='leftFlangeDiameter' 
-            onChange={(event) => handleChange(event)} 
+            name='leftFlangeDiameter'
+            value={parts.leftFlangeDiameter}
+          onChange={handleChange} 
         />
       </div>
     
@@ -55,8 +59,9 @@ const Hub = ({handleChange}) => {
             className="form-control"
             type='text'
             id='rightFlangeDiameter' 
-            name='rightFlangeDiameter' 
-            onChange={(event) => handleChange(event)} 
+            name='rightFlangeDiameter'
+            value={parts.rightFlangeDiameter} 
+          onChange={handleChange} 
         />
       </div>
   
@@ -66,8 +71,9 @@ const Hub = ({handleChange}) => {
             className="form-control"
             type='text'
             id='leftFlangeToCenter' 
-            name='leftFlangeToCenter' 
-            onChange={(event) => handleChange(event)} 
+            name='leftFlangeToCenter'
+            value={parts.leftFlangeToCenter} 
+          onChange={handleChange} 
         />    
       </div>
 
@@ -77,10 +83,11 @@ const Hub = ({handleChange}) => {
             className="form-control"
             type='text'
             id='rightFlangeToCenter' 
-            name='rightFlangeToCenter' 
-            onChange={(event) => handleChange(event)} 
+            name='rightFlangeToCenter'
+            value={parts.rightFlangeToCenter} 
+          onChange={handleChange} 
         />
-      </div> */}
+      </div>
     </>
   )
 }
