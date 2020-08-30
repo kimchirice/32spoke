@@ -12,7 +12,8 @@ const Hub = ({handleChange, parts}) => {
           id="hubName"
           name="hubName"
           value={parts.hubName}
-          onChange={handleChange} 
+          onChange={handleChange}
+          autoFocus 
         />
       </div>
    
