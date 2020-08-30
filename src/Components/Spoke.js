@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Spoke = ({handleChange}) => {
+const Spoke = ({handleChange, parts}) => {
   return (
     <>
       <div className="form-group">
@@ -10,7 +10,9 @@ const Spoke = ({handleChange}) => {
           type='text'
           id="spokeName"
           name='spokeName'
+          value={parts.spokeName }
           onChange={handleChange}
+          autoFocus
         />
       </div>
       <div className="form-group">
@@ -19,7 +21,8 @@ const Spoke = ({handleChange}) => {
             className="form-control"
             type='text'
             id='spokeWeight' 
-            name='spokeWeight' 
+            name='spokeWeight'
+            value={parts.spokeWeight} 
             onChange={handleChange}
             />
       </div>

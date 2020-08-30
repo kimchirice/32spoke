@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Rim = ({handleChange})=> {
+const Rim = ({handleChange, parts})=> {
   return (
     <>
     <div>
@@ -10,7 +10,9 @@ const Rim = ({handleChange})=> {
         type='text'
         id="rimName"
         name='rimName'
+        value={parts.rimName}
         onChange={handleChange}
+        autoFocus
         />
     </div>
 
@@ -20,7 +22,8 @@ const Rim = ({handleChange})=> {
           className="form-control"
           type='text'
           id='rimWeight' 
-          name='rimWeight' 
+          name='rimWeight'
+          value={parts.rimWeight} 
           onChange={handleChange}          />
     </div>
    
@@ -30,7 +33,8 @@ const Rim = ({handleChange})=> {
             className="form-control"
             type='text'
             id='rimERD' 
-            name='rimERD' 
+            name='rimERD'
+            value={parts.rimERD} 
             onChange={handleChange}          />
       </div>
 
@@ -40,7 +44,8 @@ const Rim = ({handleChange})=> {
             className="form-control"
             type='text'
             id='offsetSpokeBed' 
-            name='offsetSpokeBed' 
+            name='offsetSpokeBed'
+            value={parts.offsetSpokeBed} 
             onChange={handleChange}          />
       </div>
       <div className="form-group ">
@@ -49,7 +54,8 @@ const Rim = ({handleChange})=> {
             className="form-control"
             type='text'
             id='maxRimTension' 
-            name='maxRimTension' 
+            name='maxRimTension'
+            value={parts.maxRimTension} 
             onChange={handleChange}          />
       </div>
     </>

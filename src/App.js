@@ -18,7 +18,12 @@ function App() {
     leftFlangeToCenter: '',
     rightFlangeToCenter: '',
     rimName: '',
+    rimWeight: '',
+    rimERD: '',
+    offsetSpokeBed: '',
+    maxrimTension: '',
     spokeName: '',
+    spokeWeight: '',
   }
   const [parts, setParts] = useState(partsInitialValue)
 
