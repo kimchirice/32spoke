@@ -14,6 +14,7 @@ function App() {
     hubWeight: '',
     spokeHoleDiameter: '',
     leftFlangeDiameter: '',
+    rightFlangeDiameter: '',
     rimName: '',
     spokeName: '',
   }
