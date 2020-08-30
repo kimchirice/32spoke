@@ -12,6 +12,8 @@ function App() {
   const partsInitialValue = {
     hubName: '',
     hubWeight: '',
+    spokeHoleDiameter: '',
+    leftFlangeDiameter: '',
     rimName: '',
     spokeName: '',
   }
