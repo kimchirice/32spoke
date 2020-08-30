@@ -15,6 +15,8 @@ function App() {
     spokeHoleDiameter: '',
     leftFlangeDiameter: '',
     rightFlangeDiameter: '',
+    leftFlangeToCenter: '',
+    rightFlangeToCenter: '',
     rimName: '',
     spokeName: '',
   }
@@ -54,7 +56,6 @@ function App() {
 
   return (
     <div className="App">
-      {parts.hubNmae}
       <Navigation />
       <Progress currentStep={currentStep} />
       { currentStep === 1 && <Hub handleChange={handleParts} /> }
