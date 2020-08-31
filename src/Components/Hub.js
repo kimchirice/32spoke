@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hub = ({handleChange, parts}) => {
+const Hub = ({handleChange, hub}) => {
   console.log()
   return (
     <>
@@ -12,7 +12,7 @@ const Hub = ({handleChange, parts}) => {
           type="text"
           id="hubName"
           name="hubName"
-          value={parts.hubName}
+          value={hub.hubName}
           onChange={handleChange}
           autoFocus 
         />
@@ -25,7 +25,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='hubWeight' 
             name='hubWeight'
-            value={parts.hubWeight}
+            value={hub.hubWeight}
             onChange={handleChange} 
         />  
       </div>
@@ -39,7 +39,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='spokeHoleDiameter' 
             name='spokeHoleDiameter'
-            value={parts.spokeHoleDiameter} 
+            value={hub.spokeHoleDiameter} 
           onChange={handleChange} 
         />
       </div>
@@ -52,7 +52,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='leftFlangeDiameter' 
             name='leftFlangeDiameter'
-            value={parts.leftFlangeDiameter}
+            value={hub.leftFlangeDiameter}
           onChange={handleChange} 
         />
       </div>
@@ -64,7 +64,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='rightFlangeDiameter' 
             name='rightFlangeDiameter'
-            value={parts.rightFlangeDiameter} 
+            value={hub.rightFlangeDiameter} 
           onChange={handleChange} 
         />
       </div>
@@ -79,7 +79,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='leftFlangeToCenter' 
             name='leftFlangeToCenter'
-            value={parts.leftFlangeToCenter} 
+            value={hub.leftFlangeToCenter} 
           onChange={handleChange} 
         />    
       </div>
@@ -91,7 +91,7 @@ const Hub = ({handleChange, parts}) => {
             type='text'
             id='rightFlangeToCenter' 
             name='rightFlangeToCenter'
-            value={parts.rightFlangeToCenter} 
+            value={hub.rightFlangeToCenter} 
           onChange={handleChange} 
         />
       </div>
