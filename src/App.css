@@ -12,7 +12,8 @@ button, input, select {
   font-size: 100%;
 }
 
-.form-lable {
+able {
+  display: flex;
   text-align: left;
 }
 

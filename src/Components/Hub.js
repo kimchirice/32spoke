@@ -19,7 +19,7 @@ const Hub = ({handleChange, parts}) => {
       </div>
    </div><div className="form-row">
       <div className="form-group ">
-        <label className="form-label" htmlFor="hubWeight">Hub weight</label>
+        <label className="form-label" htmlFor="hubWeight">Hub weight(g)</label>
         <input 
             className="form-control"
             type='text'
@@ -33,7 +33,7 @@ const Hub = ({handleChange, parts}) => {
     </div>
     <div className="form-row">
       <div className="form-group ">
-        <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
+        <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter(mm)</label>
         <input 
             className="form-control"
             type='text'
@@ -46,7 +46,7 @@ const Hub = ({handleChange, parts}) => {
       </div>
       <div className="form-row">
       <div className="form-group ">
-        <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
+        <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter(mm)</label>
         <input 
             className="form-control"
             type='text'
@@ -58,7 +58,7 @@ const Hub = ({handleChange, parts}) => {
       </div>
     
       <div className="form-group ">
-        <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
+        <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter(mm)</label>
         <input 
             className="form-control"
             type='text'
@@ -73,7 +73,7 @@ const Hub = ({handleChange, parts}) => {
 
       
       <div className="form-group ">
-        <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
+        <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center(mm)</label>
         <input 
             className="form-control"
             type='text'
@@ -85,7 +85,7 @@ const Hub = ({handleChange, parts}) => {
       </div>
 
       <div className="form-group ">
-        <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
+        <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center(mm)</label>
         <input 
             className="form-control"
             type='text'
