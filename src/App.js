@@ -63,8 +63,8 @@ function App() {
       { currentStep === 1 && <Hub handleChange={handleParts} parts={parts}/> }
       { currentStep === 2 && <Rim handleChange={handleParts} parts={parts}/> }
       { currentStep === 3 && <Spoke handleChange={handleParts} parts={parts}/> }
-      { currentStep > 1 && <Button title={'Prev'} className="btn btn-primary" handleClick={handleButtonPrev} />}
-      { currentStep < 4 && <Button title={"Next"} className="btn btn-warning" handleClick={handleButtonNext} /> }
+      { currentStep > 1 && <Button className="btn btn-primary" title={'Prev'} handleClick={handleButtonPrev} />}
+      { currentStep < 4 && <Button className="btn btn-info" title={'Next'} handleClick={handleButtonNext} /> }
     </div>
   );
 }

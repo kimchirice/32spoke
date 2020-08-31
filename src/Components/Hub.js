@@ -4,6 +4,7 @@ const Hub = ({handleChange, parts}) => {
   console.log()
   return (
     <>
+      <div className="form-row">
       <div className="form-group">
         <label htmlFor="hubName" className="form-label">Hub Name</label>
         <input
@@ -16,7 +17,7 @@ const Hub = ({handleChange, parts}) => {
           autoFocus 
         />
       </div>
-   
+   </div><div className="form-row">
       <div className="form-group ">
         <label className="form-label" htmlFor="hubWeight">Hub weight</label>
         <input 
@@ -26,10 +27,11 @@ const Hub = ({handleChange, parts}) => {
             name='hubWeight'
             value={parts.hubWeight}
             onChange={handleChange} 
-        />
+        />  
       </div>
     
-    
+    </div>
+    <div className="form-row">
       <div className="form-group ">
         <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
         <input 
@@ -41,7 +43,8 @@ const Hub = ({handleChange, parts}) => {
           onChange={handleChange} 
         />
       </div>
-    
+      </div>
+      <div className="form-row">
       <div className="form-group ">
         <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
         <input 
@@ -65,7 +68,10 @@ const Hub = ({handleChange, parts}) => {
           onChange={handleChange} 
         />
       </div>
-  
+      </div>
+      <div className="form-row">
+
+      
       <div className="form-group ">
         <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
         <input 
@@ -88,6 +94,7 @@ const Hub = ({handleChange, parts}) => {
             value={parts.rightFlangeToCenter} 
           onChange={handleChange} 
         />
+      </div>
       </div>
     </>
   )
