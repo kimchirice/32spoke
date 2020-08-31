@@ -1,5 +1,5 @@
 ## 32spoke
-a webapp helps wheelbuilder to calculate spoke length for the coming build
+my idea is to build a webapp helps my own hobby project to build a wheelset. but this wheelbuilder to calculate spoke length for the coming build
 
 
 ## wheel variables
