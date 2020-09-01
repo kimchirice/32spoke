@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import './App.css'
-import Navigation from './components/Navigation'
-import Progress from './components/Progress'
-import Hub from './components/Hub'
-import Rim from './components/Rim'
-import Spoke from './components/Spoke'
-import Button from './components/Button'
-import SpokeCalculator from './components/utils/SpokeCalculator'
-import SpokeLength from './components/SpokeLength'
+import React, { useState } from 'react';
+import './App.css';
+import Navigation from './components/Navigation';
+import Progress from './components/Progress';
+import Hub from './components/Hub';
+import Rim from './components/Rim';
+import Spoke from './components/Spoke';
+import Button from './components/Button';
+import SpokeCalculator from './components/utils/SpokeCalculator';
+import SpokeLength from './components/SpokeLength';
 
 
 function App() {
@@ -92,13 +92,13 @@ function App() {
     // calculate left side
     // d, r1, r2, r3, m, k
     // 
-    const {leftFlangeToCenter, rimERD, spokeHoleDiameter, }
-    SpokeCalculator(c)
+    // const {leftFlangeToCenter, rimERD, spokeHoleDiameter, }
+    
     // Calculate right side
   }
 
   const calculatorWheelWeight = () => {
-
+    alert('Hooray')
   }
 
   return (
