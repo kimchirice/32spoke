@@ -34,7 +34,8 @@ const Spoke = ({handleChange, spoke}) => {
             className="form-control"
             type='text'
             id='numberOfSpokes' 
-            name='numberOfSpokes' 
+            name='numberOfSpokes'
+            value={spoke.numberOfSpokes}
             onChange={handleChange}
             >
             <option value="16">16</option>
@@ -42,7 +43,7 @@ const Spoke = ({handleChange, spoke}) => {
             <option value="20">20</option>
             <option value="24">24</option>
             <option value="28">28</option>
-            <option value="32" selected>32</option>
+            <option value="32">32</option>
           </select>
         </div> 
       </div>
@@ -54,13 +55,14 @@ const Spoke = ({handleChange, spoke}) => {
             className="form-control"
             type='text'
             id='lacingPatternLeft' 
-            name='lacingPatternLeft' 
+            name='lacingPatternLeft'
+            value={spoke.lacingPatternLeft} 
             onChange={handleChange}
           >
             <option value="0">ridial</option>
             <option value="1">x1</option>
             <option value="2">x2</option>
-            <option value="3" selected>x3</option>
+            <option value="3">x3</option>
             <option value="4">x4</option>
           </select>    
         </div>
@@ -73,13 +75,14 @@ const Spoke = ({handleChange, spoke}) => {
             className="form-control"
             type='text'
             id='lacingPatternRight' 
-            name='lacingPatternRight' 
+            name='lacingPatternRight'
+            value={spoke.lacingPatternRight} 
             onChange={handleChange}
           >
             <option value="0" >ridial</option>
             <option value="1" >x1</option>
             <option value="2" >x2</option>
-            <option value="3" selected>x3</option>
+            <option value="3" >x3</option>
             <option value="4">x4</option>
           </select>
         </div>

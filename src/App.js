@@ -32,6 +32,9 @@ function App() {
   const spokeInitialValue = {
     spokeName: '',
     spokeWeight: '',
+    numberOfSpokes: '32',
+    lacingPatternLeft: '0',
+    lacingPatternRight: '3',
   }
 
   const [hub, setHub] = useState(hubInitialValue)
