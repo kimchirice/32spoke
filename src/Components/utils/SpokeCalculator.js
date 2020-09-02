@@ -6,7 +6,8 @@
 //   r2 = half of Effective Rim Diameter (ERD), or the diameter the ends of the spokes make in a built wheel of the rim
 //   r3 = radius of spoke holes in the flange, for example 2.6 mm,
 //   m = number of spokes to be used for one side of the wheel, equals to half of the "spokeNumber"
-//   k = number of crossings per spoke,  
+//   k = number of crossings per spoke, 
+ 
 //    a function here to calculate angle, based on number of spokes and lacing patern(s) 
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
 

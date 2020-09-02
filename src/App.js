@@ -11,6 +11,11 @@ import SpokeLength from './components/SpokeLength';
 
 
 function App() {
+  let spokeLengthRight
+  let spokeLengthLeft
+
+  const [spokeLength, setSpokeLength] = useState([spokeLengthLeft, spokeLengthRight])
+
   const hubInitialValue = {
     hubName: '',
     hubWeight: '',
@@ -26,7 +31,7 @@ function App() {
     rimWeight: '',
     rimERD: '',
     offsetSpokeBed: '',
-    maxrimTension: '',
+    maxRimTension: '',
   }
 
   const spokeInitialValue = {
@@ -91,18 +96,49 @@ function App() {
     
   }
 
-  const calculatorSpokeLength = ({hub, rim, spoke}) => {
+  const calculatorSpokeLength = (e) => {
+    e.preventDefault(e)
+    if (currentStep < 4){
+      setCurrentStep( preV => preV += 1)
+    }
     // calculate left side
     // d, r1, r2, r3, m, k
-    // 
-    // const {leftFlangeToCenter, rimERD, spokeHoleDiameter, }
-    
+
     // Calculate right side
+    let centerToFlangeLeft = parseFloat(hub.leftFlangeToCenter)
+    let centerToFlangeRight = parseFloat(hub.rightFlangeToCenter)
+    let m = parseFloat(spoke.numberOfSpokes) / 2
+    let kLeft = parseFloat(spoke.lacingPatternLeft)
+    let kRight = parseFloat(spoke.lacingPatternRight)
+    let radius1 = parseFloat(hub.leftFlangeDiameter) / 2
+    let radius2 = parseFloat(rim.rimERD) / 2
+    let radius3 = parseFloat(hub.spokeHoleDiameter) / 2
+
+    spokeLengthLeft = SpokeCalculator(
+      centerToFlangeLeft, 
+      radius1, 
+      radius2, 
+      radius3, 
+      m, 
+      kLeft
+    )
+    console.log(spokeLengthLeft)
+
+    spokeLengthRight = SpokeCalculator(
+      centerToFlangeRight, 
+      radius1, 
+      radius2, 
+      radius3, 
+      m, 
+      kRight
+    )
+  console.log(spokeLengthRight);
+  setSpokeLength([spokeLengthLeft, spokeLengthRight])
   }
 
-  const calculatorWheelWeight = () => {
-    alert('Hooray')
-  }
+  // const calculatorWheelWeight = () => {
+  //   alert('Hooray')
+  // }
 
   return (
     <div className="App">
@@ -111,10 +147,11 @@ function App() {
       { currentStep === 1 && <Hub handleChange={handleHub} hub={hub}/> }
       { currentStep === 2 && <Rim handleChange={handleRim} rim={rim}/> }
       { currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke}/> }
-      { currentStep === 4 && <SpokeLength length={'300'} /> }
+      { currentStep === 4 && <SpokeLength spokeLength={spokeLength} /> }
       <div>
         { currentStep > 1 && <Button className="btn btn-primary" title={'Prev'} handleClick={handleButtonPrev} />}
-        { currentStep < 4 && <Button className="btn btn-info" title={'Next'} handleClick={handleButtonNext} /> }
+        { currentStep < 3 && <Button className="btn btn-info" title={'Next'} handleClick={handleButtonNext} /> }
+        { currentStep === 3 && <Button title={'Calculate'} handleClick={calculatorSpokeLength}/>}
       </div>
       
     </div>
