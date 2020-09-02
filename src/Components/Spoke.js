@@ -27,7 +27,7 @@ const Spoke = ({handleChange, spoke}) => {
             />
       </div>
 
-      {/* <div className="form-group row">
+       <div className="form-group row">
         <label className="col-form-label col-sm-6 ml-0 pl-0 font-weight-bold" htmlFor="numberOfSpokes">Number of Spokes</label>
         <div className="col-sm-6">
           <select 
@@ -35,7 +35,7 @@ const Spoke = ({handleChange, spoke}) => {
             type='text'
             id='numberOfSpokes' 
             name='numberOfSpokes' 
-            onChange={(e)=> handleChange(e.target.value)}
+            onChange={handleChange}
             >
             <option value="16">16</option>
             <option value="18">18</option>
@@ -55,8 +55,8 @@ const Spoke = ({handleChange, spoke}) => {
             type='text'
             id='lacingPatternLeft' 
             name='lacingPatternLeft' 
-            onChange={(e)=> handleChange(e.target.value)}
-            
+            onChange={handleChange}
+          >
             <option value="0">ridial</option>
             <option value="1">x1</option>
             <option value="2">x2</option>
@@ -74,16 +74,16 @@ const Spoke = ({handleChange, spoke}) => {
             type='text'
             id='lacingPatternRight' 
             name='lacingPatternRight' 
-            onChange={(e)=> handleChange(e.target.value)}
-            
+            onChange={handleChange}
+          >
             <option value="0" >ridial</option>
             <option value="1" >x1</option>
             <option value="2" >x2</option>
             <option value="3" selected>x3</option>
             <option value="4">x4</option>
           </select>
-        </div> */}
-      {/* </div>    */}
+        </div>
+      </div>
     </>
   )
 }
