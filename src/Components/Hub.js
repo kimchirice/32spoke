@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Hub = ({handleChange, hub}) => {
-  console.log()
   return (
     <>
       <div className="form-row">
