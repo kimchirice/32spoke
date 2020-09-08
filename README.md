@@ -12,13 +12,12 @@ my idea is to build a webapp helps my own hobby project to build a wheelset. but
     * Right flange to center 
     * Spoke hole diameter
  
-    
   2. Rim
     * Rim name
+    * Rim weight
     * Rim ERD
     * Offset spoke bed(OSB)
     * Max rim tension
-    * Rim weight
     
   3. Lacing
     - Spoke name
