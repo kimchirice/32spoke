@@ -1,5 +1,5 @@
 ## 32spoke
-my idea is to build a webapp helps my own hobby project to build a wheelset. but this wheelbuilder to calculate spoke length for the coming build
+The idea was to build a tool to help me re-build my long-hauled front wheel. Then it became a webapp helps everyone whose project is build a wheelset by himself(herself). I hope this help you calculate spoke length for the next build
 
 
 ## wheel variables
