@@ -20,10 +20,10 @@ my idea is to build a webapp helps my own hobby project to build a wheelset. but
     * Max rim tension
     
   3. Lacing
-    - Spoke name
-    - Number of spokes
+    * Spoke name
+    * Number of spokes
       - options are 16/18/20/24/28/32/36
-    - Lacing pattern
+    * Lacing pattern
       - options are radial / 1x / 2x / 3x
       
       
