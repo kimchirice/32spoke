@@ -5,12 +5,13 @@ my idea is to build a webapp helps my own hobby project to build a wheelset. but
 ## wheel variables
   1. Hub
     * Hub name
+    * Hub weight
     * Left flange diameter
     * Right flange diameter
     * Left flange to center
     * Right flange to center 
     * Spoke hole diameter
-    * Hub weight
+ 
     
   2. Rim
     * Rim name
