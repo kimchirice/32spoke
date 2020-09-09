@@ -146,9 +146,14 @@ function Home() {
       { currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke}/> }
       { currentStep === 4 && <SpokeLength hubName={hub.hubName} rimName={rim.rimName} spokeName={spoke.spokeName} spokeLength={spokeLength} /> }
       <div>
-        { currentStep > 1 && <Button className="btn btn-primary" title={'Prev'} handleClick={handleButtonPrev} />}
-        { currentStep < 3 && <Button className="btn btn-info" title={'Next'} handleClick={handleButtonNext} /> }
-        { currentStep === 3 && <Button title={'Calculate'} handleClick={calculatorSpokeLength}/>}
+        { currentStep > 1 && <Button 
+          classNames={"btn btn-lg btn-primary"} 
+          title={'Prev'} 
+          handleClick={handleButtonPrev} 
+          />
+        }
+        { currentStep < 3 && <Button classNames={"btn-info btn btn-lg" } title={'Next'} handleClick={handleButtonNext} /> }
+        { currentStep === 3 && <Button classNames={"btn btn-lg btn-success"} title={'Calculate'} handleClick={calculatorSpokeLength}/>}
       </div>
     </>
   );

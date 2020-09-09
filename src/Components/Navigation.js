@@ -7,12 +7,13 @@ export default function Navigation() {
   return ( 
     <Router>        
       <div>
-        <ul className='nav nav-pills'>
+        <nav className='nav nav-pills' role='navigation'>
           <li className='nav-item'>
             <NavLink exact to="/" className='nav-link'>Home</NavLink>
           </li>
-          <li><NavLink to="/about" className='nav-link'>About</NavLink></li>
-        </ul>
+          <li className='nav-item'>
+            <NavLink to="/about" className='nav-link'>About</NavLink></li>
+        </nav>
         <Switch>  
           <Route exact path='/' ><Home /></Route>
           <Route path='/about'><About /></Route>
