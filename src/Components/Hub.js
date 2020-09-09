@@ -3,9 +3,8 @@ import React from 'react';
 const Hub = ({handleChange, hub}) => {
   return (
     <>
-      <div className="form-row">
       <div className="form-group">
-        <label htmlFor="hubName" className="form-label">Hub Name</label>
+        <label htmlFor="hubName" className="form-label">Hub name</label>
         <input
           className="form-control" 
           type="text"
@@ -16,8 +15,7 @@ const Hub = ({handleChange, hub}) => {
           autoFocus 
         />
       </div>
-      </div>
-      <div className="form-row">
+ 
         <div className="form-group ">
           <label className="form-label" htmlFor="hubWeight">Hub weight(g)</label>
           <input 
@@ -29,9 +27,6 @@ const Hub = ({handleChange, hub}) => {
               onChange={handleChange} 
           />  
         </div>
-    
-      </div>
-      <div className="form-row">
         <div className="form-group ">
           <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter(mm)</label>
           <input 
@@ -43,8 +38,7 @@ const Hub = ({handleChange, hub}) => {
             onChange={handleChange} 
           />
         </div>
-      </div>
-      <div className="form-row">
+
         <div className="form-group ">
           <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter(mm)</label>
           <input 
@@ -68,8 +62,8 @@ const Hub = ({handleChange, hub}) => {
             onChange={handleChange} 
           />
         </div>
-      </div>
-      <div className="form-row">
+      
+
         <div className="form-group ">
           <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center(mm)</label>
           <input 
@@ -91,7 +85,7 @@ const Hub = ({handleChange, hub}) => {
               value={hub.rightFlangeToCenter} 
             onChange={handleChange} 
           />
-        </div>
+        
       </div>
     </>
   )

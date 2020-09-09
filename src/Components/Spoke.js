@@ -16,7 +16,7 @@ const Spoke = ({handleChange, spoke}) => {
         />
       </div>
       <div className="form-group">
-        <label className="col-form-label  col-sm-4" htmlFor="spokeWeight">Spoke Weight(g.)</label>  
+        <label className="col-form-label" htmlFor="spokeWeight">Spoke Weight(g)</label>  
         <input 
             className="form-control"
             type='text'
