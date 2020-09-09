@@ -16,8 +16,9 @@ const Spoke = ({handleChange, spoke}) => {
         />
       </div>
       <div className="form-group">
-        <label className="col-form-label" htmlFor="spokeWeight">Spoke Weight(g)</label>  
-        <input 
+        <label className="col-form-label" htmlFor="spokeWeight">Spoke Weight</label>  
+        <div className="d-flex">
+          <input 
             className="form-control"
             type='text'
             id='spokeWeight' 
@@ -25,6 +26,10 @@ const Spoke = ({handleChange, spoke}) => {
             value={spoke.spokeWeight} 
             onChange={handleChange}
             />
+            <div className="form-group-append">
+              <span className="input-group-text">g</span>
+            </div>
+          </div>  
       </div>
 
        <div className="form-group row">
