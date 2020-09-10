@@ -23,6 +23,24 @@ describe(' testing DOM elements', () => {
     const InputFieldHubName = getByText("Hub name");
     expect(InputFieldHubName).toBeInTheDocument();
   });
+
+  it('Input field should NOT be named "Hub Name"(All Capital)', ()=> {
+    const { queryByText } = render(<App />);
+    const InputFieldHubNameAllCapital = queryByText("Hub Name");
+    expect(InputFieldHubNameAllCapital).toBeNull();
+  });
+
+  it('Input field should not be named "HUB NAME"(uppercase)', ()=> {
+    const { queryByText } = render(<App />);
+    const InputFieldHubNameUppercase = queryByText("HUB NAME");
+    expect(InputFieldHubNameUppercase).toBeNull();
+  });
+
+  it('Input field should not be named "hub name"(lowercase)', ()=> {
+    const { queryByText } = render(<App />);
+    const InputFieldHubNameLowercase = queryByText("hub name");
+    expect(InputFieldHubNameLowercase).toBeNull();
+  });
   
  
   
