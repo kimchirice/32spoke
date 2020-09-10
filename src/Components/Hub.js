@@ -34,15 +34,15 @@ const Hub = ({handleChange, hub}) => {
           <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
           <div className="d-flex">
             <input 
-                className="form-control"
-                type='number'
-                id='spokeHoleDiameter' 
-                name='spokeHoleDiameter'
-                value={hub.spokeHoleDiameter} 
-                onChange={handleChange} 
-                min="1.5"
-                max="3.5"
-                step="0.1"
+              className="form-control"
+              type='number'
+              id='spokeHoleDiameter' 
+              name='spokeHoleDiameter'
+              value={hub.spokeHoleDiameter} 
+              onChange={handleChange} 
+              min="1.5"
+              max="3.5"
+              step="0.1"
             />
             <div className="form-group-append">
                 <span className="input-group-text">mm</span>  

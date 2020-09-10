@@ -2,27 +2,53 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders Home link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText("Home" );
-  expect(linkElement).toBeInTheDocument();
-});
+describe(' testing DOM elements', () => {
+  
+  it('renders Home link in the DOM', () => {
+    const { getByText } = render(<App />);
+    const linkElementHome = getByText("Home" );
+    expect(linkElementHome).toBeInTheDocument();
+  });
+  
+  it('renders About link', () => {
+    const { getByText } = render(<App />);
+    const linkElementAbout = getByText("About" );
+    expect(linkElementAbout).toBeInTheDocument();
+  });
 
-test('renders About link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText("About" );
-  expect(linkElement).toBeInTheDocument();
-});
+ 
+  
+  it('Input field named "Hub name"', ()=> {
+    const { getByText } = render(<App />);
+    const InputFieldHubName = getByText("Hub name");
+    expect(InputFieldHubName).toBeInTheDocument();
+  });
+  
+ 
+  
+  it('Input field named Hub Weight', ()=> {
+    const { getByText } = render(<App />);
+    const InputFieldHubWeight = getByText("Hub weight");
+    expect(InputFieldHubWeight).toBeInTheDocument();
+  });
+})
 
-test('Input field named Hub Name', ()=> {
-  const { getByText } = render(<App />);
-  const InputFieldHubName = getByText("Hub Name");
-  expect(InputFieldHubName).toBeInTheDocument();
-});
 
-test('Input field named Hub Weight', ()=> {
-  const { getByText } = render(<App />);
-  const InputFieldHubWeight = getByText("Hub weight(g)");
-  expect(InputFieldHubWeight).toBeInTheDocument();
-});
+it('navigation role is rendered', () => {
+  const { getByRole } = render(<App />);
+  getByRole('navigation');
+})
+
+it('render label "Hub weight"', () => {
+  const { getByLabelText } = render(<App />);
+  const labelTextHubName = getByLabelText("Hub weight");
+  expect(labelTextHubName).toBeInTheDocument();
+})
+
+it('render an input label of "Hub name"', () => {
+  const { getByLabelText } = render(<App />);
+  const labelTextHubName = getByLabelText("Hub name");
+  expect(labelTextHubName).toBeInTheDocument();
+})
+
 
