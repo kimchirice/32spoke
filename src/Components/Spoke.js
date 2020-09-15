@@ -54,7 +54,12 @@ const Spoke = ({handleChange, spoke}) => {
       </div>
 
       <div className="form-group row">
-        <label className="col-form-label col-sm-6 ml-0 pl-0 font-weight-bold" htmlFor="lacingPatternLeft">Lacing Pattern Left</label>
+        <label 
+          className="col-form-label col-sm-6 ml-0 pl-0 font-weight-bold" 
+          htmlFor="lacingPatternLeft"
+        >
+          Lacing Pattern Left
+        </label>
         <div className="col-sm-6">  
           <select 
             className="form-control"
@@ -74,7 +79,11 @@ const Spoke = ({handleChange, spoke}) => {
       </div>
 
       <div className="form-group row">
-        <label className="col-form-label col-sm-6 ml-0 pl-0 font-weight-bold" htmlFor="numberOfSpokes">Lacing pattern right</label>
+        <label 
+          className="col-form-label col-sm-6 ml-0 pl-0 font-weight-bold" 
+          htmlFor="numberOfSpokes"
+        >Lacing pattern right
+        </label>
         <div className="col-sm-6">
           <select 
             className="form-control"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
 describe(' testing DOM elements', () => {
@@ -68,5 +68,32 @@ it('render an input label of "Hub name"', () => {
   const labelTextHubName = getByLabelText("Hub name");
   expect(labelTextHubName).toBeInTheDocument();
 })
+
+describe(' testing input field in Hub component', () => {
+  const setup = () => {
+    const utils = render(<App />)
+    const inputHubName = utils.getByLabelText('Hub name')
+    return {
+      inputHubName,
+      ...utils
+    } 
+  }
+  
+  
+  test('renders input lable of hubName to bitex in the DOM', () => {
+    const {  inputHubName  } = setup();
+    fireEvent.change(inputHubName, {target: {value: 'bitex raf12'} })
+    expect(inputHubName.value).toBe('bitex raf12')
+  });
+  
+  test('renders input lable of hubName to Shimano in the DOM', () => {
+    const {  inputHubName  } = setup();
+    fireEvent.change(inputHubName, {target: {value: 'Shimano 6600'} })
+ 
+    expect(inputHubName.value).toBe('Shimano 6600')
+  });
+  
+
+});
 
 
