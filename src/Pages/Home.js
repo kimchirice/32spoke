@@ -12,7 +12,9 @@ function Home() {
   let spokeLengthRight
   let spokeLengthLeft
 
+
   const [spokeLength, setSpokeLength] = useState([spokeLengthLeft, spokeLengthRight])
+  const [wheelWeight, setWheelWeight] = useState(0) 
 
   const hubInitialValue = {
     hubName: '',
@@ -94,8 +96,7 @@ function Home() {
     
   }
 
-  const calculatorSpokeLength = (e) => {
-    e.preventDefault(e)
+  const calculatorSpokeLength = () => {
     if (currentStep < 4){
       setCurrentStep( preV => preV += 1)
     }
@@ -112,7 +113,7 @@ function Home() {
     let radius2 = parseFloat(rim.rimERD) / 2
     let radius3 = parseFloat(hub.spokeHoleDiameter) / 2
 
-    spokeLengthLeft = SpokeCalculator(
+    const spokeLengthLeftUpdate = SpokeCalculator(
       centerToFlangeLeft, 
       radius1, 
       radius2, 
@@ -120,9 +121,9 @@ function Home() {
       m, 
       kLeft
     )
-    console.log(spokeLengthLeft)
+    console.log(spokeLengthLeftUpdate)
 
-    spokeLengthRight = SpokeCalculator(
+    const spokeLengthRightUpdate = SpokeCalculator(
       centerToFlangeRight, 
       radius1, 
       radius2, 
@@ -130,13 +131,15 @@ function Home() {
       m, 
       kRight
     )
-  console.log(spokeLengthRight);
-  setSpokeLength([spokeLengthLeft, spokeLengthRight])
+  console.log(spokeLengthRightUpdate);
+  setSpokeLength([spokeLengthLeftUpdate, spokeLengthRightUpdate])
   }
 
-  // const calculatorWheelWeight = () => {
-  //   alert('Hooray')
-  // }
+  const calculatorWheelWeight = () => {
+    const wheelWeightUpdate = parseFloat( hub.hubWeight ) + parseFloat(rim.rimWeight) + parseFloat( spoke.spokeWeight * spoke.numberOfSpokes);
+    console.log(wheelWeightUpdate);
+    setWheelWeight(wheelWeightUpdate)
+  }
 
   return (
     <>
@@ -144,7 +147,7 @@ function Home() {
       { currentStep === 1 && <Hub handleChange={handleHub} hub={hub}/> }
       { currentStep === 2 && <Rim handleChange={handleRim} rim={rim}/> }
       { currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke}/> }
-      { currentStep === 4 && <SpokeLength hubName={hub.hubName} rimName={rim.rimName} spokeName={spoke.spokeName} spokeLength={spokeLength} /> }
+      { currentStep === 4 && <SpokeLength hubName={hub.hubName} rimName={rim.rimName} spokeName={spoke.spokeName} spokeLength={spokeLength} wheelWeight={wheelWeight} /> }
       <div>
         { currentStep > 1 && <Button 
           classNames={"btn btn-lg btn-primary btn-block"} 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SpokeLength({hubName, rimName, spokeName, spokeLength}) {
+function SpokeLength({hubName, rimName, spokeName, spokeLength, wheelWeight}) {
   return (
   <>
       <p>Base on your input details</p>
@@ -12,6 +12,7 @@ function SpokeLength({hubName, rimName, spokeName, spokeLength}) {
       <p>we suggest to use</p> 
       <p>{spokeLength[1]}mm spoke for right side</p> 
       <p>and {spokeLength[0]}mm for left side</p>
+  <p>then your new wheel weights about {wheelWeight}</p>
     </>
   )
 }
