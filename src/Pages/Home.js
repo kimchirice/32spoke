@@ -161,7 +161,7 @@ function Home() {
           handleClick={handleButtonNext} 
           /> 
         }
-        { currentStep === 3 && <Button classNames={"btn btn-lg btn-success btn-block"} title={'Calculate'} handleClick={calculatorSpokeLength}/>}
+        { currentStep === 3 && <Button classNames={"btn btn-lg btn-success btn-block"} title={'Calculate'} handleClick={() => {calculatorSpokeLength(); calculatorWheelWeight()}}/>}
       </div>
     </>
   );
