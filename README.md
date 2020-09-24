@@ -29,11 +29,20 @@ The idea was to build a tool to help me re-build my long-hauled front wheel. The
       
     
 ## Color
-```
-/* SCSS RGB */
-$ruby-red: rgba(163, 22, 33, 1);
-$beau-blue: rgba(191, 219, 247, 1);
-$indigo-dye: rgba(5, 60, 94, 1);
-$metallic-seaweed: rgba(31, 122, 140, 1);
-$amaranth-red: rgba(219, 34, 42, 1);
-```
+- Option 1
+  ```
+  /* SCSS RGB */
+  $ruby-red: rgba(163, 22, 33, 1);
+  $beau-blue: rgba(191, 219, 247, 1);
+  $indigo-dye: rgba(5, 60, 94, 1);
+  $metallic-seaweed: rgba(31, 122, 140, 1);
+  $amaranth-red: rgba(219, 34, 42, 1);
+  ```
+- Option 2
+  ```
+  $eerie-black: rgba(24, 24, 24, 1);
+  $silver: rgba(196, 196, 196, 1);
+  $white: rgba(255, 255, 255, 1);
+  $aureolin: rgba(247, 232, 19, 1);
+  $madder-lake: rgba(208, 51, 58, 1);
+  ```
