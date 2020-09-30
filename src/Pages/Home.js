@@ -7,11 +7,9 @@ import Button from '../components/Button';
 import SpokeCalculator from '../components/utils/SpokeCalculator';
 import SpokeLength from '../components/SpokeLength';
 
-
 function Home() {
   let spokeLengthRight
   let spokeLengthLeft
-
 
   const [spokeLength, setSpokeLength] = useState([spokeLengthLeft, spokeLengthRight])
   const [wheelWeight, setWheelWeight] = useState(0) 
@@ -45,7 +43,6 @@ function Home() {
   const [hub, setHub] = useState(hubInitialValue)
   const [rim, setRim] = useState(rimInitialValue)
   const [spoke, setSpoke] = useState(spokeInitialValue)
-
   const [currentStep, setCurrentStep] = useState(1)
 
   const handleHub = (event) => {
@@ -65,8 +62,7 @@ function Home() {
         ...prev,
         [name]: value,
       })
-    )
-      
+    )  
   }
 
   const handleSpoke = (event) => {
@@ -78,8 +74,6 @@ function Home() {
       })
     )
   }
-
-
 
   const handleButtonNext = (e) => {
     e.preventDefault()
@@ -93,7 +87,6 @@ function Home() {
     if (currentStep > 1){
       setCurrentStep( preV => preV -= 1)
     } 
-    
   }
 
   const calculatorSpokeLength = () => {
@@ -102,8 +95,6 @@ function Home() {
     }
     // calculate left side
     // d, r1, r2, r3, m, k
-
-    // Calculate right side
     let centerToFlangeLeft = parseFloat(hub.leftFlangeToCenter)
     let centerToFlangeRight = parseFloat(hub.rightFlangeToCenter)
     let m = parseFloat(spoke.numberOfSpokes) / 2
@@ -121,8 +112,8 @@ function Home() {
       m, 
       kLeft
     )
-    console.log(spokeLengthLeftUpdate)
 
+    // Calculate right side
     const spokeLengthRightUpdate = SpokeCalculator(
       centerToFlangeRight, 
       radius1, 
@@ -131,7 +122,6 @@ function Home() {
       m, 
       kRight
     )
-  console.log(spokeLengthRightUpdate);
   setSpokeLength([spokeLengthLeftUpdate, spokeLengthRightUpdate])
   }
 
