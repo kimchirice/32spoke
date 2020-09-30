@@ -22,6 +22,15 @@ function Home() {
     rightFlangeDiameter: '',
     leftFlangeToCenter: '',
     rightFlangeToCenter: '',
+    isHubError: {
+      hubName: '',
+      hubWeight: '',
+      spokeHoleDiameter: '',
+      leftFlangeDiameter: '',
+      rightFlangeDiameter: '',
+      leftFlangeToCenter: '',
+      rightFlangeToCenter: '',
+    },
   }
 
   const rimInitialValue = {
@@ -30,6 +39,13 @@ function Home() {
     rimERD: '',
     offsetSpokeBed: '',
     maxRimTension: '',
+    isRimError: {
+      rimName: '',
+      rimWeight: '',
+      rimERD: '',
+      offsetSpokeBed: '',
+      maxRimTension: '',
+    }
   }
 
   const spokeInitialValue = {
@@ -38,6 +54,13 @@ function Home() {
     numberOfSpokes: '32',
     lacingPatternLeft: '0',
     lacingPatternRight: '3',
+    isSpokeError: {
+      spokeName: '',
+      spokeWeight: '',
+      numberOfSpokes: '',
+      lacingPatternLeft: '',
+      lacingPatternRight: '',
+    }
   }
 
   const [hub, setHub] = useState(hubInitialValue)
