@@ -70,6 +70,8 @@ function Home() {
 
   const handleHub = (event) => {
     let {name, value} = event.target
+    //adding conditions to validate the input
+    
     setHub(prev => 
       ({
         ...prev,
