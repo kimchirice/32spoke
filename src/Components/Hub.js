@@ -35,6 +35,7 @@ const Hub = ({handleChange, hub}) => {
           <div className="d-flex">
             <input 
               className="form-control"
+              required
               type='number'
               id='spokeHoleDiameter' 
               name='spokeHoleDiameter'
