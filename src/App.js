@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import Navigation from './Components/Navigation/Navigation'
-
+import Navigation from './Components/Navigation';
 
 function App() {
-  return (
-    <div className="App">
-        <Navigation />
-    </div>
+    return (
+        <div className="App container">
+          <Navigation />
+      </div>
   );
 }
 
