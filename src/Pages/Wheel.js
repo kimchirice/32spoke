@@ -1,26 +1,63 @@
-import React, {useContext} from 'react'
+import React, {useState} from 'react'
 import Hub from '../Components/Hub/Hub'
 import Rim from '../Components/Rim/Rim'
 import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
 
-import {WheelContext} from '../Context/WheelContext'
 
 const Wheel = () => {
-  const {currentStep, handleClickPrev, handleClickNext, handleClickCalculate } = useContext(WheelContext)
+  // function currentStep() {},
+  const [currentStep, setCurrentStep] = useState(1)
+  
+  const initialWheelValue = {}
+  const [wheel, setWheel]=useState(initialWheelValue)
+
+  const optionsNumberOfSpokes = [14, 16, 18, 20, 24, 28, 32, 36]
+  const optionsLacingPattern = [0, 1, 2, 3, 4]
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    wheel[name] = value;
+    setWheel(wheel);
+  }
+
+  const handleClickCalculate = (e) => {
+    e.preventDefault();
+    alert(`Yeah, got all the data`)
+  }
+  const handleClickPrev= (e) => {
+    e.preventDefault();
+    if (currentStep >= 2) {
+      setCurrentStep(prev => prev -= 1)
+    }
+    return currentStep
+  }
+
+  const handleClickNext = (e) => {
+    e.preventDefault();
+    if (currentStep >= 1 && currentStep < 3) {
+      setCurrentStep(prev => prev += 1)
+    }
+    return currentStep
+  }
 
   const Steps = () => {
     switch(currentStep) {
       case 1: 
         return (
-          <Hub/>
+          <Hub wheel={wheel} onChange={handleChange}/>
         );
       case 2: 
-          return(<Rim />)
+          return(<Rim wheel={wheel} onChange={handleChange}/>)
       case 3: 
-        return( <SpokeNLacing />)
+        return( <SpokeNLacing 
+                  wheel={wheel} 
+                  onChange={handleChange}
+                  optionsLacingPattern={optionsLacingPattern}
+                  optionsNumberOfSpokes={optionsNumberOfSpokes}
+                />);
       default:
         return (
-          <Hub/>
+          <Hub wheel={wheel} onChange={handleChange}/>
         );
     }
   }
@@ -31,7 +68,6 @@ const Wheel = () => {
       case 1: 
         return(
           <div>
-            <div></div>
             <button onClick={handleClickNext} type="button" className="btn btn-warning">Next ❯</button>
           </div>
         )
@@ -58,7 +94,7 @@ const Wheel = () => {
   
   
   return (
-    <div className="d-flex flex-column justify-content-center align-items-start">
+    <div className="d-flex flex-column align-items-start">
       <h4>Step {currentStep}</h4>
       <Steps />
       <Buttons />
