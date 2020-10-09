@@ -1,5 +1,5 @@
 // d, r1, r2, r3, m, k
-//   viaration need to attention, OSB, Spoke type J-bend or Straight-pulll
+//   variation need to attention, OSB, Spoke type J-bend or Straight-pulll
 //   d = distance from the center of hub (along the axis) to flange, for instance of a rear hub, cTLF and cTLR are different   
 //   r1 = the radius of circle of flange holes, equals to PCD/2 
 //   r2 = half of Effective Rim Diameter (ERD), or the diameter the ends of the spokes make in a built wheel of the rim
@@ -9,7 +9,6 @@
 
 //    a function here to calculate angle, based on number of spokes and lacing patern(s) 
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
-
   const angleCalculator = (k, m)=> {
     // angle = 360° * k / m,  for example of 3-crossing of 1 32-spoke  360° * 3 / 16 
         const angle = 360 * k / m
