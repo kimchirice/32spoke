@@ -9,7 +9,7 @@
 
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
   
-  const angleCalculator = (spokeNumber, crossing)=> {
+  const angleCalculator = (crossing, spokeNumber)=> {
     //  for example of 3-crossing of 1 32-spoke  360° * 3 / (32 / 2) 
         const angle = 360  * crossing / spokeNumber
         return angle
