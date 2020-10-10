@@ -9,10 +9,9 @@
 
 //    a function here to calculate angle, based on number of spokes and lacing patern(s) 
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
-
-  const angleCalculator = (k, m)=> {
-    // angle = 360° * k / m,  for example of 3-crossing of 1 32-spoke  360° * 3 / 16 
-        const angle = 360 * k / m
+  const angleCalculator = (crossing, spokeNumber)=> {
+    //  for example of 3-crossing of 1 32-spoke  360° * 3 / (32 / 2) 
+        const angle = 360  * crossing / spokeNumber
         return angle
   }
 
