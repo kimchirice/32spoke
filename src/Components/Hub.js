@@ -27,9 +27,23 @@ const Hub = ({handleChange, hub}) => {
               value={hub.hubWeight}
               onChange={handleChange} 
           /><div className="form-group-append">
-          <span className="input-group-text"> g </span>
+          <span className="input-group-text">g</span>
           </div> </div> 
         </div>
+        {/* <div className="form-group ">
+          <label className="form-label" htmlFor="hubOLD">O.L.D</label>
+          <div className="d-flex">
+          <input 
+              className="form-control"
+              type='text'
+              id='hubOLD' 
+              name='hubOLD'
+              value={hub.hubOLD}
+              onChange={handleChange} 
+          /><div className="form-group-append">
+          <span className="input-group-text">mm</span>
+          </div> </div> 
+        </div> */}
         <div className="form-group ">
           <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
           <div className="d-flex">
