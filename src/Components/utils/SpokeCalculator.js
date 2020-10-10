@@ -7,7 +7,6 @@
 // m = number of spokes to be used for the wheel, equals the "spokeNumber" 
 // k = number of crossings per spoke, lacing pattern, radial, 1 crossing, 2 crossing, 3 crossing
 
-
 const spokeCalculator=(d, r1, r2, r3, m, k) => {
   
   const angleCalculator = (spokeNumber, crossing)=> {
@@ -22,13 +21,11 @@ const spokeCalculator=(d, r1, r2, r3, m, k) => {
   }
 
   const angle = angleCalculator(k, m)
-  console.log(angle);
   let spokeLength = Math.sqrt(Math.pow(d, 2) + Math.pow(r1, 2) + Math.pow(r2, 2) - 2 * r1 * r2 * Math.cos(angle)) - (r3)
   
   spokeLength = roundNumberToTowDecimal(spokeLength)
   
   return spokeLength;
 }
-
 
 export default spokeCalculator;
