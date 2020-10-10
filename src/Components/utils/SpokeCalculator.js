@@ -21,7 +21,7 @@ const spokeCalculator=(d, r1, r2, r3, m, k) => {
       return Math.round((num + Number.EPSILON) * 100) / 100
   }
 
-  const angle = angleCalculator(k, m)
+  const angle = angleCalculator(m, k)
   console.log(angle);
   let spokeLength = Math.sqrt(Math.pow(d, 2) + Math.pow(r1, 2) + Math.pow(r2, 2) - 2 * r1 * r2 * Math.cos(angle)) - (r3)
   
