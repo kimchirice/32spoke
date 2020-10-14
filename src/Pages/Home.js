@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Progress from '../components/Progress';
-import Hub from '../components/Hub';
-import Rim from '../components/Rim';
-import Spoke from '../components/Spoke';
+import Hub from '../components/hub/Hub';
+import Rim from '../components/rim/Rim';
+import Spoke from '../components/spokeSpoke';
 import Button from '../components/Button';
 import SpokeCalculator from '../components/utils/SpokeCalculator';
-import SpokeLength from '../components/SpokeLength';
+import SpokeLength from '../components/spokeLength/SpokeLength';
 
 function Home() {
   let spokeLengthRight
