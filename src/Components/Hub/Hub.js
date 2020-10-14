@@ -1,115 +1,127 @@
-import React,{ useContext } from 'react'
-import { WheelContext } from '../../Context/WheelContext'
+import React from 'react';
 
-export default function Hub() {
-  const {wheel, handleChange} = useContext(WheelContext);
-  
-
-    return (            
-      <div>
-        <h3>Hub details</h3>
-        <form >
-          <fieldset id="form--hub">
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="hubName">Hub Name</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='hubName' 
-                    name='hubName' 
-                    value={wheel.hubName} 
-                    onChange={handleChange}
-                    autoFocus 
-                />
-                <p className=""> optional</p>
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="hubWeight">Hub weight</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='hubWeight' 
-                    name='hubWeight' 
-                    value={wheel.hubWeight} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='spokeHoleDiameter' 
-                    name='spokeHoleDiameter' 
-                    value={wheel.spokeHoleDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='leftFlangeDiameter' 
-                    name='leftFlangeDiameter' 
-                    value={wheel.leftFlangeDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rightFlangeDiameter' 
-                    name='rightFlangeDiameter' 
-                    value={wheel.rightFlangeDiameter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='leftFlangeToCenter' 
-                    name='leftFlangeToCenter' 
-                    value={wheel.leftFlangeToCenter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-            <div className="form-row">
-              <div className="form-group ">
-                <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
-                <input 
-                    className="form-control"
-                    type='text'
-                    id='rightFlangeToCenter' 
-                    name='rightFlangeToCenter' 
-                    value={wheel.rightFlangeToCenter} 
-                    onChange={handleChange} 
-                />
-              </div>
-            </div>
-
-
-              
-
-            
-          </fieldset>
-        </form>
+const Hub = ({handleChange, hub}) => {
+  return (
+    <>
+      <div className="form-group">
+        <label htmlFor="hubName" className="form-label">Hub name</label>
+        <input
+          className="form-control" 
+          type="text"
+          id="hubName"
+          name="hubName"
+          value={hub.hubName}
+          onChange={handleChange}
+          autoFocus 
+        />
       </div>
-    );
+ 
+        <div className="form-group ">
+          <label className="form-label" htmlFor="hubWeight">Hub weight</label>
+          <div className="d-flex">
+          <input 
+              className="form-control"
+              type='text'
+              id='hubWeight' 
+              name='hubWeight'
+              value={hub.hubWeight}
+              onChange={handleChange} 
+          /><div className="form-group-append">
+          <span className="input-group-text"> g </span>
+          </div> </div> 
+        </div>
+        <div className="form-group ">
+          <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
+          <div className="d-flex">
+            <input 
+              className="form-control"
+              type='number'
+              id='spokeHoleDiameter' 
+              name='spokeHoleDiameter'
+              value={hub.spokeHoleDiameter} 
+              onChange={handleChange} 
+              min="1.5"
+              max="3.5"
+              step="0.1"
+            />
+            <div className="form-group-append">
+                <span className="input-group-text">mm</span>  
+            </div>
+          </div>  
+        </div>
+
+        <div className="form-group ">
+          <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
+          <div className="d-flex">
+            <input 
+              className="form-control"
+              type='text'
+              id='leftFlangeDiameter' 
+              name='leftFlangeDiameter'
+              value={hub.leftFlangeDiameter}
+              onChange={handleChange} 
+            />
+            <div className="form-group-append">
+              <span className="input-group-text">mm</span>  
+            </div>  
+          </div>
+        </div>
+      
+        <div className="form-group ">
+          <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
+          <div className="d-flex">
+            <input 
+              className="form-control"
+              type='text'
+              id='rightFlangeDiameter' 
+              name='rightFlangeDiameter'
+              value={hub.rightFlangeDiameter} 
+              onChange={handleChange} 
+            />
+            <div className="form-group-append">
+              <span className="input-group-text">mm</span>  
+            </div>
+          </div>
+        </div>
+      
+
+        <div className="form-group ">
+          <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
+          <div className="d-flex">
+            <input 
+              className="form-control"
+              type='text'
+              id='leftFlangeToCenter' 
+              name='leftFlangeToCenter'
+              value={hub.leftFlangeToCenter} 
+              onChange={handleChange} 
+            />
+            <div className="form-group-append">
+              <span className="input-group-text">mm</span>  
+            </div>  
+          </div>
+            
+        </div>
+        <div className="form-group ">
+          <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
+          <div className="d-flex">
+            <input 
+                className="form-control"
+                type='text'
+                id='rightFlangeToCenter' 
+                name='rightFlangeToCenter'
+                value={hub.rightFlangeToCenter} 
+              onChange={handleChange} 
+            />
+            <div className="form-group-append">
+              <span className="input-group-text">mm</span>
+            </div>
+          </div>  
+          
+        
+      </div>
+    </>
+  )
 }
+
+export default Hub;
