@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import Hub from '../Components/Hub/Hub'
-import Rim from '../Components/Rim/Rim'
-import SpokeNLacing from '../Components/SpokeNLacing/SpokeNLacing'
+import Rim from '../components/rim/Rim'
+import SpokeNLacing from '../components/spokeNLacing/SpokeNLacing'
 
 import {WheelContext} from '../Context/WheelContext'
 
