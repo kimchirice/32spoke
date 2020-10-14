@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
-import Navigation from './Components/Navigation/Navigation'
-import {WheelContextProvider} from './Context/WheelContext'
+import Navigation from './components/navigation/Navigation'
 
 function App() {
   return (
     <div className="App">
-      <WheelContextProvider>
+      <>
         <Navigation />
-      </WheelContextProvider>
+      </>
     </div>
   );
 }
