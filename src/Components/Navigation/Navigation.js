@@ -1,23 +1,21 @@
 import React from 'react'
 import {BrowserRouter as Router, NavLink, Route, Switch} from 'react-router-dom'
-import Home from '../../Pages/Home'
-import About from '../../Pages/About'
-import Wheel from '../../Pages/Wheel'
+import Home from '../pages/Home'
+import About from '../pages/About'
 
 export default function Navigation() {
   return ( 
     <Router>        
       <div>
-        <ul className='nav nav-pills'>
+        <nav className='nav nav-pills' role='navigation'>
           <li className='nav-item'>
             <NavLink exact to="/" className='nav-link'>Home</NavLink>
           </li>
-          <li><NavLink to="/wheel" className='nav-link'>Wheel</NavLink></li>
-          <li><NavLink to="/about" className='nav-link'>About</NavLink></li>
-        </ul>
+          <li className='nav-item'>
+            <NavLink to="/about" className='nav-link'>About</NavLink></li>
+        </nav>
         <Switch>  
           <Route exact path='/' ><Home /></Route>
-          <Route path='/wheel' ><Wheel /></Route>
           <Route path='/about'><About /></Route>
         </Switch>
       </div>
