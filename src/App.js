@@ -4,10 +4,8 @@ import Navigation from './components/navigation/Navigation'
 
 function App() {
   return (
-    <div className="App">
-      <>
-        <Navigation />
-      </>
+    <div className="App container">
+      <Navigation />
     </div>
   );
 }
