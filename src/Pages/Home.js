@@ -118,7 +118,7 @@ function Home() {
     if (currentStep < 4){
       setCurrentStep( preV => preV += 1)
     }
-    // calculate left side
+    // calculate left side, if it is a rear hub,  this is of non-drive side
     // d, r1, r2, r3, m, k
     let centerToFlangeLeft = parseFloat(hub.leftFlangeToCenter)
     let centerToFlangeRight = parseFloat(hub.rightFlangeToCenter)
@@ -152,7 +152,6 @@ function Home() {
 
   const calculatorWheelWeight = () => {
     const wheelWeightUpdate = parseFloat( hub.hubWeight ) + parseFloat(rim.rimWeight) + parseFloat( spoke.spokeWeight * spoke.numberOfSpokes);
-    console.log(wheelWeightUpdate);
     setWheelWeight(wheelWeightUpdate)
   }
 
