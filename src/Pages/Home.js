@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Progress from '../components/Progress';
+import Progress from '../components/progress/Progress';
 import Hub from '../components/hub/Hub';
 import Rim from '../components/rim/Rim';
-import Spoke from '../components/spokeSpoke';
-import Button from '../components/Button';
+import Spoke from '../components/spoke/Spoke';
+import Button from '../components/button/Button';
 import SpokeCalculator from '../components/utils/SpokeCalculator';
 import SpokeLength from '../components/spokeLength/SpokeLength';
 
