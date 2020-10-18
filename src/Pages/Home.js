@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Progress from '../Components/progress/Progress';
-import Hub from '../Components/Hub/Hub';
+import Hub from '../Components/hub/Hub';
 import Rim from '../Components/Rim/Rim';
 import Spoke from '../Components/spoke/Spoke';
 import Button from '../Components/button/Button';
