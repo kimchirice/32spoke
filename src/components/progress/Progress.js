@@ -5,7 +5,7 @@ function Progress({currentStep}) {
   let width = currentStep * 25;
   return (
       <div>
-        {currentStep}    
+        {width}    
       </div>
   )
 }
