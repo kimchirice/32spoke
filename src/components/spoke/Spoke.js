@@ -2,7 +2,7 @@ import React from 'react';
 
 const Spoke = ({handleChange, spoke}) => {
   return (
-    <>
+    <div className="text-left">
       <div className="form-group">
         <label className="form-label" htmlFor="spokeName">Spoke Name</label>
         <input 
@@ -101,7 +101,7 @@ const Spoke = ({handleChange, spoke}) => {
           </select>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

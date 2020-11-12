@@ -3,9 +3,9 @@ import React from 'react';
 
 const Hub = ({handleChange, hub}) => {
   return (
-    <>
-      <div className="form-group">
-        <label htmlFor="hubName" className="form-label">Hub name</label>
+    <div className="text-left">
+      <div className="form-group my-4">
+        <label htmlFor="hubName" className="form-label mb-0">Hub name</label>
         <input
           className="form-control" 
           type="text"
@@ -18,7 +18,7 @@ const Hub = ({handleChange, hub}) => {
       </div>
  
         <div className="form-group ">
-          <label className="form-label" htmlFor="hubWeight">Hub weight</label>
+          <label className="form-label mb-1" htmlFor="hubWeight">Hub weight</label>
           <div className="d-flex">
           <input 
               className="form-control"
@@ -121,7 +121,7 @@ const Hub = ({handleChange, hub}) => {
           
         
       </div>
-    </>
+    </div>
   )
 }
 

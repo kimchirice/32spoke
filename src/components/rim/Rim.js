@@ -2,8 +2,8 @@ import React from 'react'
 
 const Rim = ({handleChange, rim})=> {
   return (
-    <>
-    <div>
+    <div className="text-left">
+    <div className="form-group">
       <label htmlFor="rimName" className="form-label">Rim Name</label>
       <input
         className="form-control"
@@ -78,7 +78,7 @@ const Rim = ({handleChange, rim})=> {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
