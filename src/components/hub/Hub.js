@@ -4,7 +4,7 @@ import React from 'react';
 const Hub = ({handleChange, hub}) => {
   return (
     <div className="text-left">
-      <div className="form-group my-4">
+      <div className="form-group mb-lg-3">
         <label htmlFor="hubName" className="form-label mb-0">Hub name</label>
         <input
           className="form-control" 
@@ -17,8 +17,8 @@ const Hub = ({handleChange, hub}) => {
         />
       </div>
  
-        <div className="form-group ">
-          <label className="form-label mb-1" htmlFor="hubWeight">Hub weight</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="hubWeight">Hub weight</label>
           <div className="d-flex">
           <input 
               className="form-control"
@@ -31,8 +31,8 @@ const Hub = ({handleChange, hub}) => {
           <span className="input-group-text"> g </span>
           </div> </div> 
         </div>
-        <div className="form-group ">
-          <label className="form-label" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="spokeHoleDiameter">Spoke hole diameter</label>
           <div className="d-flex">
             <input 
               className="form-control"
@@ -51,8 +51,8 @@ const Hub = ({handleChange, hub}) => {
           </div>  
         </div>
 
-        <div className="form-group ">
-          <label className="form-label" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="leftFlangeDiameter">Left Flange diameter</label>
           <div className="d-flex">
             <input 
               className="form-control"
@@ -68,8 +68,8 @@ const Hub = ({handleChange, hub}) => {
           </div>
         </div>
       
-        <div className="form-group ">
-          <label className="form-label" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="rightFlangeDiameter">Right Flange diameter</label>
           <div className="d-flex">
             <input 
               className="form-control"
@@ -86,8 +86,8 @@ const Hub = ({handleChange, hub}) => {
         </div>
       
 
-        <div className="form-group ">
-          <label className="form-label" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="leftFlangeToCenter">Left Flange to Center</label>
           <div className="d-flex">
             <input 
               className="form-control"
@@ -103,8 +103,8 @@ const Hub = ({handleChange, hub}) => {
           </div>
             
         </div>
-        <div className="form-group ">
-          <label className="form-label" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
+        <div className="form-group mb-lg-3">
+          <label className="form-label mb-0" htmlFor="rightFlangeToCenter">Right Flange to Center</label>
           <div className="d-flex">
             <input 
                 className="form-control"
@@ -118,8 +118,6 @@ const Hub = ({handleChange, hub}) => {
               <span className="input-group-text">mm</span>
             </div>
           </div>  
-          
-        
       </div>
     </div>
   )
