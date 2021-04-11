@@ -1,3 +1,6 @@
+[![GitHub issues](https://img.shields.io/github/issues/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/issues)
+
+
 ## 32spoke
 The idea was to build a tool to help me re-build my long-hauled front wheel. Then it became a webapp helps everyone whose project is build a wheelset by himself(herself). I hope this help you calculate spoke length for the next build
 
