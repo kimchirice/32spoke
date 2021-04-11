@@ -1,6 +1,8 @@
 {
   "name": "32spoke-v2",
   "version": "0.1.0",
+  "author": "Max Du",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
