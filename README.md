@@ -1,39 +1,44 @@
 [![GitHub issues](https://img.shields.io/github/issues/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/issues)
 [![GitHub license](https://img.shields.io/github/license/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2)
+[![GitHub forks](https://img.shields.io/github/forks/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/forks)
+[![GitHub stars](https://img.shields.io/github/stars/kimchirice/32spoke-v2)](https://img.shields.io/github/stars/kimchirice/32spoke-v2/stars)
 
 ## 32spoke
-The idea was to build a tool to help me re-build my long-hauled front wheel. Then it became a webapp helps everyone whose wants to build a wheelset by herself/himself. 
+
+The idea was to build a tool to help me re-build my long-hauled front wheel. Then it became a webapp helps everyone whose wants to build a wheelset by herself/himself.
 
 I hope this help you calculate spoke length for the next build
 
-
 ## wheel variables
-  1. Hub
-    * Hub name
-    * Hub weight
-    * Left flange diameter
-    * Right flange diameter
-    * Left flange to center
-    * Right flange to center 
-    * Spoke hole diameter
- 
-  2. Rim
-    * Rim name
-    * Rim weight
-    * Rim ERD
-    * Offset spoke bed(OSB)
-    * Max rim tension
-    
-  3. Lacing
-    * Spoke name
-    * Number of spokes
-      - options are 16/18/20/24/28/32/36
-    * Lacing pattern
-      - options are radial / 1x / 2x / 3x
-      
-      
-    
+
+1. Hub
+
+   - Hub name
+   - Hub weight
+   - Left flange diameter
+   - Right flange diameter
+   - Left flange to center
+   - Right flange to center
+   - Spoke hole diameter
+
+2. Rim
+
+   - Rim name
+   - Rim weight
+   - Rim ERD
+   - Offset spoke bed(OSB)
+   - Max rim tension
+
+3. Lacing
+
+   - Spoke name
+   - Number of spokes
+     - options are 16/18/20/24/28/32/36
+   - Lacing pattern
+     - options are radial / 1x / 2x / 3x
+
 ## Color
+
 - Option 1
   ```
   /* SCSS RGB */
