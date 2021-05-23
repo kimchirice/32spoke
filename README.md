@@ -11,7 +11,7 @@ I hope this help you calculate spoke length for the next build
 
 ## wheel variables
 
-1. Hub
+1.  Hub
 
    - Hub name
    - Hub weight
@@ -21,7 +21,7 @@ I hope this help you calculate spoke length for the next build
    - Right flange to center
    - Spoke hole diameter
 
-2. Rim
+2.  Rim
 
    - Rim name
    - Rim weight
@@ -29,7 +29,7 @@ I hope this help you calculate spoke length for the next build
    - Offset spoke bed(OSB)
    - Max rim tension
 
-3. Lacing
+3.  Lacing
 
    - Spoke name
    - Number of spokes
@@ -39,7 +39,7 @@ I hope this help you calculate spoke length for the next build
 
 ## Color
 
-- Option 1
+-  Option 1
   ```
   /* SCSS RGB */
   $ruby-red: rgba(163, 22, 33, 1);
