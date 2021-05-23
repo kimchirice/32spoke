@@ -2,6 +2,7 @@
 [![GitHub license](https://img.shields.io/github/license/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2)
 [![GitHub forks](https://img.shields.io/github/forks/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/forks)
 [![GitHub stars](https://img.shields.io/github/stars/kimchirice/32spoke-v2)](https://img.shields.io/github/stars/kimchirice/32spoke-v2/stars)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ea7d21330252448092820a823cd3170d)](https://www.codacy.com/gh/kimchirice/32spoke-v2/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kimchirice/32spoke-v2&amp;utm_campaign=Badge_Grade)
 
 ## 32spoke
 
