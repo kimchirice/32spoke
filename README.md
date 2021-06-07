@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+[![GitHub issues](https://img.shields.io/github/issues/kimchirice/32spoke3)](https://github.com/kimchirice/32spoke-v3/issues)
+[![GitHub license](https://img.shields.io/github/license/kimchirice/32spoke-v3)](https://github.com/kimchirice/32spoke-v3)
+[![GitHub forks](https://img.shields.io/github/forks/kimchirice/32spoke-v3)](https://github.com/kimchirice/32spoke-v3/forks)
+[![GitHub stars](https://img.shields.io/github/stars/kimchirice/32spoke-v3)](https://img.shields.io/github/stars/kimchirice/32spoke-v3/stars)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 32spoke
 
-In the project directory, you can run:
+The idea was to build a tool to help me re-build my long-hauled front wheel. Then it became a webapp helps everyone whose wants to build a wheelset by herself/himself.
 
-### `npm start`
+I hope this help you calculate spoke length for the next build
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## live one [32spoke](https://32spoke.netlify.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## wheel variables
 
-### `npm test`
+1.  Hub
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Hub name
+- Hub weight
+- Left flange diameter
+- Right flange diameter
+- Left flange to center
+- Right flange to center
+- Spoke hole diameter
 
-### `npm run build`
+2.  Rim
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Rim name
+- Rim weight
+- Rim ERD
+- Offset spoke bed(OSB)
+- Max rim tension
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3.  Lacing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Spoke name
+- Number of spokes
+  - 16
+  - 18
+  - 20
+  - 24
+  - 28
+  - 32
+  - 36
+- Lacing pattern
+  - 1x
+  - 2x
+  - 3x
 
-### `npm run eject`
+## Color
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Option 1
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ```
+  /* SCSS RGB */
+  $ruby-red: rgba(163, 22, 33, 1);
+  $beau-blue: rgba(191, 219, 247, 1);
+  $indigo-dye: rgba(5, 60, 94, 1);
+  $metallic-seaweed: rgba(31, 122, 140, 1);
+  $amaranth-red: rgba(219, 34, 42, 1);
+  ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Option 2
+  ```
+  /* SCSS RGB */
+  $eerie-black: rgba(24, 24, 24, 1);
+  $silver: rgba(196, 196, 196, 1);
+  $white: rgba(255, 255, 255, 1);
+  $aureolin: rgba(247, 232, 19, 1);
+  $madder-lake: rgba(208, 51, 58, 1);
+  ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
