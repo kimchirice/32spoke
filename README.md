@@ -1,7 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues/kimchirice/32spoke3)](https://github.com/kimchirice/32spoke-v3/issues)
-[![GitHub license](https://img.shields.io/github/license/kimchirice/32spoke-v3)](https://github.com/kimchirice/32spoke-v3)
-[![GitHub forks](https://img.shields.io/github/forks/kimchirice/32spoke-v3)](https://github.com/kimchirice/32spoke-v3/forks)
-[![GitHub stars](https://img.shields.io/github/stars/kimchirice/32spoke-v3)](https://img.shields.io/github/stars/kimchirice/32spoke-v3/stars)
+[![GitHub issues](https://img.shields.io/github/issues/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/issues)
+[![GitHub license](https://img.shields.io/github/license/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2)
+[![GitHub forks](https://img.shields.io/github/forks/kimchirice/32spoke-v2)](https://github.com/kimchirice/32spoke-v2/forks)
+[![GitHub stars](https://img.shields.io/github/stars/kimchirice/32spoke-v2)](https://img.shields.io/github/stars/kimchirice/32spoke-v2/stars)
 
 
 ## 32spoke
