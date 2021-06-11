@@ -12,7 +12,7 @@ function Home() {
   let spokeLengthLeft
 
   const [spokeLength, setSpokeLength] = useState([spokeLengthLeft, spokeLengthRight])
-  const [wheelWeight, setWheelWeight] = useState(0) 
+  const [wheelWeight, setWheelWeight] = useState(0)
 
   const hubInitialValue = {
     hubName: '',
@@ -69,54 +69,54 @@ function Home() {
   const [currentStep, setCurrentStep] = useState(1)
 
   const handleHub = (event) => {
-    let {name, value} = event.target
+    let { name, value } = event.target
     //adding conditions to validate the input
-    
-    setHub(prev => 
-      ({
-        ...prev,
-        [name]: value,
-      })
+
+    setHub(prev =>
+    ({
+      ...prev,
+      [name]: value,
+    })
     )
   }
-  
+
   const handleRim = (event) => {
-    let {name, value} = event.target
+    let { name, value } = event.target
     setRim(prev => (
       {
         ...prev,
         [name]: value,
       })
-    )  
+    )
   }
 
   const handleSpoke = (event) => {
-    let {name, value} = event.target
-    setSpoke(prev => 
-      ({
-        ...prev,
-        [name]: value,
-      })
+    let { name, value } = event.target
+    setSpoke(prev =>
+    ({
+      ...prev,
+      [name]: value,
+    })
     )
   }
 
   const handleButtonNext = (e) => {
     e.preventDefault()
-    if (currentStep < 4){
-      setCurrentStep( preV => preV += 1)
+    if (currentStep < 4) {
+      setCurrentStep(preV => preV += 1)
     }
   }
 
   const handleButtonPrev = (e) => {
     e.preventDefault()
-    if (currentStep > 1){
-      setCurrentStep( preV => preV -= 1)
-    } 
+    if (currentStep > 1) {
+      setCurrentStep(preV => preV -= 1)
+    }
   }
 
   const calculatorSpokeLength = () => {
-    if (currentStep < 4){
-      setCurrentStep( preV => preV += 1)
+    if (currentStep < 4) {
+      setCurrentStep(preV => preV += 1)
     }
     // calculate left side
     // d, r1, r2, r3, m, k
@@ -130,28 +130,28 @@ function Home() {
     let radius3 = parseFloat(hub.spokeHoleDiameter) / 2
 
     const spokeLengthLeftUpdate = SpokeCalculator(
-      centerToFlangeLeft, 
-      radius1, 
-      radius2, 
-      radius3, 
-      m, 
+      centerToFlangeLeft,
+      radius1,
+      radius2,
+      radius3,
+      m,
       kLeft
     )
 
     // Calculate right side
     const spokeLengthRightUpdate = SpokeCalculator(
-      centerToFlangeRight, 
-      radius1, 
-      radius2, 
-      radius3, 
-      m, 
+      centerToFlangeRight,
+      radius1,
+      radius2,
+      radius3,
+      m,
       kRight
     )
-  setSpokeLength([spokeLengthLeftUpdate, spokeLengthRightUpdate])
+    setSpokeLength([spokeLengthLeftUpdate, spokeLengthRightUpdate])
   }
 
   const calculatorWheelWeight = () => {
-    const wheelWeightUpdate = parseFloat( hub.hubWeight ) + parseFloat(rim.rimWeight) + parseFloat( spoke.spokeWeight * spoke.numberOfSpokes);
+    const wheelWeightUpdate = parseFloat(hub.hubWeight) + parseFloat(rim.rimWeight) + parseFloat(spoke.spokeWeight * spoke.numberOfSpokes);
     console.log(wheelWeightUpdate);
     setWheelWeight(wheelWeightUpdate)
   }
@@ -159,24 +159,24 @@ function Home() {
   return (
     <>
       <Progress currentStep={currentStep} />
-      { currentStep === 1 && <Hub handleChange={handleHub} hub={hub}/> }
-      { currentStep === 2 && <Rim handleChange={handleRim} rim={rim}/> }
-      { currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke}/> }
-      { currentStep === 4 && <SpokeLength hubName={hub.hubName} rimName={rim.rimName} spokeName={spoke.spokeName} spokeLength={spokeLength} wheelWeight={wheelWeight} /> }
+      { currentStep === 1 && <Hub handleChange={handleHub} hub={hub} />}
+      { currentStep === 2 && <Rim handleChange={handleRim} rim={rim} />}
+      { currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke} />}
+      { currentStep === 4 && <SpokeLength hubName={hub.hubName} rimName={rim.rimName} spokeName={spoke.spokeName} spokeLength={spokeLength} wheelWeight={wheelWeight} />}
       <div>
-        { currentStep > 1 && <Button 
-          classNames={"btn btn-lg btn-primary btn-block"} 
-          title={'Prev'} 
-          handleClick={handleButtonPrev} 
-          />
+        {currentStep > 1 && <Button
+          classNames={"btn btn-lg btn-primary btn-block"}
+          title={'Prev'}
+          handleClick={handleButtonPrev}
+        />
         }
-        { currentStep < 3 && <Button 
-          classNames={"btn-info btn btn-lg btn-block" } 
-          title={'Next'} 
-          handleClick={handleButtonNext} 
-          /> 
+        {currentStep < 3 && <Button
+          classNames={"btn-info btn btn-lg btn-block"}
+          title={'Next'}
+          handleClick={handleButtonNext}
+        />
         }
-        { currentStep === 3 && <Button classNames={"btn btn-lg btn-success btn-block"} title={'Calculate'} handleClick={() => {calculatorSpokeLength(); calculatorWheelWeight()}}/>}
+        {currentStep === 3 && <Button classNames={"btn btn-lg btn-success btn-block"} title={'Calculate'} handleClick={() => { calculatorSpokeLength(); calculatorWheelWeight() }} />}
       </div>
     </>
   );
