@@ -1,3 +1,5 @@
+import React from 'react'
+
 function SpokeLength({
   hubName,
   rimName,
@@ -18,7 +20,7 @@ function SpokeLength({
       <p>and {spokeLength[0]}mm for left side</p>
       <p>then your new wheel weights about {wheelWeight}</p>
     </>
-  );
+  )
 }
 
-export default SpokeLength;
+export default SpokeLength

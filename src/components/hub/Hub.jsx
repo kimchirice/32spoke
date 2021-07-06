@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function Hub({ handleChange, hub }) {
   return (
@@ -6,7 +6,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label htmlFor='hubName' className='form-label mb-0'>
           Hub name
-				</label>
+        </label>
         <input
           className='form-control'
           type='text'
@@ -21,7 +21,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='hubWeight'>
           Hub weight
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -33,13 +33,13 @@ function Hub({ handleChange, hub }) {
           />
           <div className='form-group-append'>
             <span className='input-group-text'> g </span>
-          </div>{" "}
+          </div>{' '}
         </div>
       </div>
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='spokeHoleDiameter'>
           Spoke hole diameter
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -61,7 +61,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='leftFlangeDiameter'>
           Left Flange diameter
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -80,7 +80,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='rightFlangeDiameter'>
           Right Flange diameter
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -99,7 +99,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='leftFlangeToCenter'>
           Left Flange to Center
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -117,7 +117,7 @@ function Hub({ handleChange, hub }) {
       <div className='form-group mb-lg-3'>
         <label className='form-label mb-0' htmlFor='rightFlangeToCenter'>
           Right Flange to Center
-				</label>
+        </label>
         <div className='d-flex'>
           <input
             className='form-control'
@@ -133,7 +133,7 @@ function Hub({ handleChange, hub }) {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hub;
+export default Hub
