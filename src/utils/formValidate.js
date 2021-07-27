@@ -163,3 +163,18 @@ export const validateInput = (name, value) => {
   }
   return { hasError, error }
 }
+
+export const checkIsFormValid = (name, value, hasError, error, formState) => {
+  let isFormValid = true
+  for (const key in formState) {
+    const item = formState[key]
+    if ( key === name && hasError ) {
+      isFormValid = false
+      break
+    } else if (key !== name && item.hasError ) {
+      isFormValid = false
+      break
+    }
+  }
+  return isFormValid
+}
