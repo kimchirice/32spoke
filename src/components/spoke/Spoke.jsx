@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Spoke({ handleChange, spoke }) {
+  const { spokeName, spokeWeight, numberOfSpokes, lacingPatternLeft, lacingPatternRight } = spoke
   return (
     <div className='text-left'>
       <div className='form-group'>
@@ -12,7 +13,7 @@ function Spoke({ handleChange, spoke }) {
           type='text'
           id='spokeName'
           name='spokeName'
-          value={spoke.spokeName}
+          value={spokeName.value}
           onChange={handleChange}
           autoFocus
         />
@@ -27,7 +28,7 @@ function Spoke({ handleChange, spoke }) {
             type='text'
             id='spokeWeight'
             name='spokeWeight'
-            value={spoke.spokeWeight}
+            value={ spokeWeight.value }
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -49,7 +50,7 @@ function Spoke({ handleChange, spoke }) {
             type='text'
             id='numberOfSpokes'
             name='numberOfSpokes'
-            value={spoke.numberOfSpokes}
+            value={numberOfSpokes.value}
             onChange={handleChange}
           >
             <option value='16'>16</option>
@@ -75,7 +76,7 @@ function Spoke({ handleChange, spoke }) {
             type='text'
             id='lacingPatternLeft'
             name='lacingPatternLeft'
-            value={spoke.lacingPatternLeft}
+            value={lacingPatternLeft.value}
             onChange={handleChange}
           >
             <option value='0'>ridial</option>
@@ -100,7 +101,7 @@ function Spoke({ handleChange, spoke }) {
             type='text'
             id='lacingPatternRight'
             name='lacingPatternRight'
-            value={spoke.lacingPatternRight}
+            value={lacingPatternRight.value}
             onChange={handleChange}
           >
             <option value='0'>ridial</option>

@@ -1,16 +1,9 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+// import userEvent from '@testing-library/user-event'
 import App from './App'
 
 describe('<App />', () => {
-
-  test('input field of Hub name', () => {
-    render(<App />)
-    const inputElement = screen.getByText(/hub name/i)
-    expect(inputElement).toBeInTheDocument()
-  })
-
   test('input label of Hub name', () => {
     render(<App />)
     const inputElement = screen.getByLabelText(/^hub name/i)
@@ -19,13 +12,13 @@ describe('<App />', () => {
 
   test('input fields of hub weight', () => {
     render(<App />)
-    const inputElement = screen.getByText(/hub name/i)
+    const inputElement = screen.getByLabelText(/hub weight/i)
     expect(inputElement).toBeInTheDocument()
   })
 
   test('input field of Spoke hole diameter', () => {
     render(<App />)
-    const inputElement = screen.getByText(/Spoke hole diameter/i)
+    const inputElement = screen.getByLabelText(/Spoke hole diameter/i)
     expect(inputElement).toBeInTheDocument()
   })
   test('input field of Left Flange diameter ', () => {

@@ -2,36 +2,15 @@ import React, { useState } from 'react'
 import Hub from '../hub/Hub'
 import Rim from '../rim/Rim'
 import Spoke from '../spoke/Spoke'
+import SpokeLength from '../spoke_length/SpokeLength'
 import Button from '../button/Button'
-import { UPDATE_FORM, onInputChange, onFocusOut,  } from '../../utils/formValidate'
-
-
-// function formReducer(state, action) {
-//   switch (action.type) {
-//   case UPDATE_FORM: {
-//     // destruction from action.data
-//     const { name, value, touched, hasError, error, isFormValid } = action.data
-//     return {
-//       ...state,
-//       [name]: {
-//         ...state[name],
-//         value,
-//         touched,
-//         hasError,
-//         error,
-//       },
-//       isFormValid,
-//     }
-//   }
-//   default:
-//     return state
-//   }
-// }
-
+import { validateInput, checkIsFormValid  } from '../../utils/formValidate'
+import spokeCalculator from '../../utils/spokeCalculator'
+import Progress from '../progress/Progress'
 
 /**
  *  set the intial state of Hub
- * */ 
+ * */
 const initialHubState = {
   hubName: { value: '', touched: false, hasError: true, error: '' },
   hubWeight: { value: '', touched: false, hasError: true, error: '' },
@@ -79,11 +58,55 @@ const initialRimState = {
     touched: false,
     hasError: true,
     error: '' },
+  offsetSpokeBed: {
+    value: '',
+    touched: false,
+    hasError: true,
+    error: ''
+  },
+  maxRimTension: {
+    value: '',
+    touched: false,
+    hasError: true,
+    error: ''
+  },
+  isFormValid: false,
+}
 
+/**
+ *  spokeName,
+    spokeWeight,
+    numberOfSpokes: '32',
+    lacingPatternLeft: '0',
+    lacingPatternRight: '3',
+ *
+ */
+const initialSpokeState = {
+  spokeName: { value: '',
+    touched: false,
+    hasError: true,
+    error: '' },
+  spokeWeight: { value: '',
+    touched: false,
+    hasError: true,
+    error: '' },
+  numberOfSpokes: { value: '32',
+    touched: false,
+    hasError: true,
+    error: '' },
+  lacingPatternLeft: { value: '0',
+    touched: false,
+    hasError: true,
+    error: '' },
+  lacingPatternRight: { value: '3',
+    touched: false,
+    hasError: true,
+    error: '' },
+  isFormValid: false,
 }
 
 
-function Wheel() {
+const Wheel = () => {
   let spokeLengthRight
   let spokeLengthLeft
 
@@ -93,47 +116,84 @@ function Wheel() {
   ])
   const [wheelWeight, setWheelWeight] = useState(0)
 
-  const [hubState, dispatch]= useReducer(formReducer, initialHubState)
-  const [rimState, dispatch]= useReducer(formReducer, initialRimState)
-
-  console.log('current hub state is ' + hubState)
-
-  const handleChange =(e) => {
-    onInputChange(e.target.name, e.target.value, dispatch, hubState)
-  }
-
-  const handleBlur =(e) => {
-    console.log(e.target.name, e.target.value)
-    onFocusOut(e.target.name, e.target.value, dispatch, hubState)
-  }
-
-  const spokeInitialValue = {
-    spokeName: '',
-    spokeWeight: '',
-    numberOfSpokes: '32',
-    lacingPatternLeft: '0',
-    lacingPatternRight: '3',
-    isSpokeError: {
-      spokeName: '',
-      spokeWeight: '',
-      numberOfSpokes: '',
-      lacingPatternLeft: '',
-      lacingPatternRight: '',
-    },
-  }
-
-  //   const [hub, setHub] = useState(hubInitialValue)
-  //   const [rim, setRim] = useState(rimInitialValue)
-  const [spoke, setSpoke] = useState(spokeInitialValue)
+  const [hubState, setHubState]= useState(initialHubState)
+  const [rimState, setRimState]= useState(initialRimState)
+  const [spokeState, setSpokeState] = useState(initialSpokeState)
   const [currentStep, setCurrentStep] = useState(1)
 
-  const handleSpoke = (event) => {
-    let { name, value } = event.target
-    setSpoke((prev) => ({
-      ...prev,
-      [name]: value,
+  console.log('current hubState is ' + hubState)
+
+  const handleHubChange =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, hubState)
+
+    setHubState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: false,
+      },
+      isFormValid,
     }))
   }
+
+  const handleRimChange =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, rimState)
+
+    setRimState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: false,
+      },
+      isFormValid,
+    }))
+  }
+  const handleSpokeChange =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, spokeState)
+
+    setSpokeState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: false,
+      },
+      isFormValid,
+    }))
+  }
+  const handleBlur =(e) => {
+    console.log(e.target.name, e.target.value)
+  }
+
 
   const handleButtonNext = (e) => {
     e.preventDefault()
@@ -157,14 +217,14 @@ function Wheel() {
     // d, r1, r2, r3, m, k
     let centerToFlangeLeft = parseFloat(hubState.leftFlangeToCenter.value)
     let centerToFlangeRight = parseFloat(hubState.rightFlangeToCenter.value)
-    let m = parseFloat(spoke.numberOfSpoke) / 2
-    let kLeft = parseFloat(spoke.lacingPatternLeft)
-    let kRight = parseFloat(spoke.lacingPatternRight)
+    let m = parseFloat(spokeState.numberOfSpokes.value) / 2
+    let kLeft = parseFloat(spokeState.lacingPatternLeft.value)
+    let kRight = parseFloat(spokeState.lacingPatternRight.value)
     let radius1 = parseFloat(hubState.leftFlangeDiameter.value) / 2
     let radius2 = parseFloat(rimState.rimERD.value) / 2
     let radius3 = parseFloat(hubState.spokeHoleDiameter.value) / 2
 
-    const spokeLengthLeftUpdate = SpokeCalculator(
+    const spokeLengthLeftUpdate = spokeCalculator(
       centerToFlangeLeft,
       radius1,
       radius2,
@@ -174,7 +234,7 @@ function Wheel() {
     )
 
     // Calculate right side
-    const spokeLengthRightUpdate = SpokeCalculator(
+    const spokeLengthRightUpdate = spokeCalculator(
       centerToFlangeRight,
       radius1,
       radius2,
@@ -187,9 +247,9 @@ function Wheel() {
 
   const calculatorWheelWeight = () => {
     const wheelWeightUpdate =
-			parseFloat(hubState.hubWeight) +
-			parseFloat(rimState.rimWeight) +
-			parseFloat(spoke.spokeWeight * spoke.numberOfSpokes)
+			parseFloat(hubState.hubWeight.value) +
+			parseFloat(rimState.rimWeight.value) +
+			parseFloat(spokeState.spokeWeight.value * spokeState.numberOfSpokes.value)
     console.log(wheelWeightUpdate)
     setWheelWeight(wheelWeightUpdate)
   }
@@ -198,14 +258,14 @@ function Wheel() {
   return (
     <><form>
       <Progress currentStep={currentStep} />
-      {currentStep === 1 && <Hub handleChange={handleChange} handleBlur={handleBlur} hub={hubState} />}
-      {currentStep === 2 && <Rim handleChange={handleChange} handleBlur={handleBlur} rim={rimState}  />}
-      {currentStep === 3 && <Spoke handleChange={handleSpoke} spoke={spoke} />}
+      {currentStep === 1 && <Hub handleChange={handleHubChange} hub={hubState} />}
+      {currentStep === 2 && <Rim handleChange={handleRimChange} handleBlur={handleBlur} rim={rimState} />}
+      {currentStep === 3 && <Spoke handleChange={handleSpokeChange} spoke={spokeState} />}
       {currentStep === 4 && (
         <SpokeLength
-          hubName={hub.hubName}
-          rimName={rim.rimName}
-          spokeName={spoke.spokeName}
+          hubName={hubState.hubName.value}
+          rimName={rimState.rimName.value}
+          spokeName={spokeState.spokeName.value}
           spokeLength={spokeLength}
           wheelWeight={wheelWeight}
         />

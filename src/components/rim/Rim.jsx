@@ -1,6 +1,7 @@
 import React from 'react'
 
 function Rim({ handleChange, rim }) {
+  const { rimName, rimWeight, rimERD, offsetSpokeBed, maxRimTension } = rim
   return (
     <div className='text-left'>
       <div className='form-group'>
@@ -12,7 +13,7 @@ function Rim({ handleChange, rim }) {
           type='text'
           id='rimName'
           name='rimName'
-          value={rim.rimName}
+          value={rimName.value}
           onChange={handleChange}
           autoFocus
         />
@@ -28,7 +29,7 @@ function Rim({ handleChange, rim }) {
             type='text'
             id='rimWeight'
             name='rimWeight'
-            value={rim.rimWeight}
+            value={rimWeight.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -47,7 +48,7 @@ function Rim({ handleChange, rim }) {
             type='text'
             id='rimERD'
             name='rimERD'
-            value={rim.rimERD}
+            value={rimERD.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -66,7 +67,7 @@ function Rim({ handleChange, rim }) {
             type='text'
             id='offsetSpokeBed'
             name='offsetSpokeBed'
-            value={rim.offsetSpokeBed}
+            value={offsetSpokeBed.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -84,7 +85,7 @@ function Rim({ handleChange, rim }) {
             type='text'
             id='maxRimTension'
             name='maxRimTension'
-            value={rim.maxRimTension}
+            value={maxRimTension.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>

@@ -13,7 +13,7 @@ const Hub = ({ handleChange, hub }) => {
           type='text'
           id='hubName'
           name='hubName'
-          value={hubName}
+          value={hubName.value}
           onChange={handleChange}
           autoFocus
         />
@@ -29,7 +29,7 @@ const Hub = ({ handleChange, hub }) => {
             type='text'
             id='hubWeight'
             name='hubWeight'
-            value={hubWeight}
+            value={hubWeight.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -47,7 +47,7 @@ const Hub = ({ handleChange, hub }) => {
             type='number'
             id='spokeHoleDiameter'
             name='spokeHoleDiameter'
-            value={spokeHoleDiameter}
+            value={spokeHoleDiameter.value}
             onChange={handleChange}
             min='1.5'
             max='3.5'
@@ -69,7 +69,7 @@ const Hub = ({ handleChange, hub }) => {
             type='text'
             id='leftFlangeDiameter'
             name='leftFlangeDiameter'
-            value={leftFlangeDiameter}
+            value={leftFlangeDiameter.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -88,7 +88,7 @@ const Hub = ({ handleChange, hub }) => {
             type='text'
             id='rightFlangeDiameter'
             name='rightFlangeDiameter'
-            value={rightFlangeDiameter}
+            value={rightFlangeDiameter.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -107,7 +107,7 @@ const Hub = ({ handleChange, hub }) => {
             type='text'
             id='leftFlangeToCenter'
             name='leftFlangeToCenter'
-            value={leftFlangeToCenter}
+            value={leftFlangeToCenter.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
@@ -125,7 +125,7 @@ const Hub = ({ handleChange, hub }) => {
             type='text'
             id='rightFlangeToCenter'
             name='rightFlangeToCenter'
-            value={rightFlangeToCenter}
+            value={rightFlangeToCenter.value}
             onChange={handleChange}
           />
           <div className='form-group-append'>
