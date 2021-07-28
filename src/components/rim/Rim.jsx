@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Rim({ handleChange, rim }) {
+const Rim = ({ handleChange, rim }) => {
   const { rimName, rimWeight, rimERD, offsetSpokeBed, maxRimTension } = rim
   return (
-    <div className='text-left'>
+    <div className='text-left' >
       <div className='form-group'>
         <label htmlFor='rimName' className='form-label'>
 					Rim Name
@@ -75,6 +75,7 @@ function Rim({ handleChange, rim }) {
           </div>
         </div>
       </div>
+      
       <div className='form-group '>
         <label className='form-label' htmlFor='maxRimTension'>
 					Max Rim Tension

@@ -1,7 +1,15 @@
 import React from 'react'
 
 const Hub = ({ handleChange, hub, handleBlur }) => {
-  const { hubName, hubWeight, spokeHoleDiameter, leftFlangeDiameter, rightFlangeDiameter, leftFlangeToCenter, rightFlangeToCenter } = hub
+  const { 
+    hubName, 
+    hubWeight, 
+    spokeHoleDiameter, 
+    leftFlangeDiameter, 
+    rightFlangeDiameter, 
+    leftFlangeToCenter, 
+    rightFlangeToCenter 
+  } = hub
   return (
     <div className='text-left'>
       <div className='form-group mb-lg-3 '>
@@ -142,10 +150,8 @@ const Hub = ({ handleChange, hub, handleBlur }) => {
           <div className='form-group-append'>
             <span className='input-group-text'>mm</span>
           </div>
-        </div>
-      </div>
-    </div>
-  )
+        </div></div></div>
+    )
 }
 
 export default Hub

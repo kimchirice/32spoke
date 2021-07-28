@@ -111,9 +111,9 @@ function Spoke({ handleChange, spoke }) {
             <option value='4'>x4</option>
           </select>
         </div>
-      </div>
-    </div>
-  )
+        </div>
+        </div>
+    )
 }
 
 export default Spoke
