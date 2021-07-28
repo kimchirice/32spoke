@@ -190,8 +190,75 @@ const Wheel = () => {
       isFormValid,
     }))
   }
-  const handleBlur =(e) => {
-    console.log(e.target.name, e.target.value)
+
+
+  const handleHubBlur =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, hubState)
+
+    setHubState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: true,
+      },
+      isFormValid,
+    }))
+  }
+
+  const handleRimBlur =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, hubState)
+
+    setRimState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: true,
+      },
+      isFormValid,
+    }))
+  }
+
+  const handleSpokeBlur =(e) => {
+    const { name, value } = e.target
+    console.table({ name, value })
+
+    const { hasError, error } = validateInput(name, value)
+    console.log(`hasError is ${hasError}`)
+    console.log(`error is ${error}`)
+
+    const isFormValid = checkIsFormValid(name, value, hasError, error, hubState)
+
+    setSpokeState((prevState) => ({
+      ...prevState,
+      [name]: {
+        ...prevState[name],
+        value,
+        hasError,
+        error,
+        touched: true,
+      },
+      isFormValid,
+    }))
   }
 
 
@@ -258,9 +325,9 @@ const Wheel = () => {
   return (
     <><form>
       <Progress currentStep={currentStep} />
-      {currentStep === 1 && <Hub handleChange={handleHubChange} hub={hubState} />}
-      {currentStep === 2 && <Rim handleChange={handleRimChange} handleBlur={handleBlur} rim={rimState} />}
-      {currentStep === 3 && <Spoke handleChange={handleSpokeChange} spoke={spokeState} />}
+      {currentStep === 1 && <Hub handleChange={handleHubChange} handleBlur={handleHubBlur} hub={hubState} />}
+      {currentStep === 2 && <Rim handleChange={handleRimChange} handleBlur={handleRimBlur} rim={rimState} />}
+      {currentStep === 3 && <Spoke handleChange={handleSpokeChange} handleBlur={handleSpokeBlur} spoke={spokeState} />}
       {currentStep === 4 && (
         <SpokeLength
           hubName={hubState.hubName.value}

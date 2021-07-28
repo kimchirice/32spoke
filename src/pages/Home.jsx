@@ -7,7 +7,14 @@ import React from 'react'
 // import SpokeCalculator from '../utils/spokeCalculator'
 // import SpokeLength from '../components/spoke_length/SpokeLength'
 import Wheel from '../components/wheel/Wheel'
-const Home = () => (<Wheel />)
+const Home = () => {
+  return (
+    <>
+      <div>
+        <span className="iconic iconic-warning" title="icon warning" aria-hidden="true"></span>
+      </div>
+      <Wheel /></>)
+}
 
 
 // function Home() {
