@@ -1,4 +1,6 @@
 node_module
 build
 .eslintrc.js
+.prettierignore
+.prettierrc.json
 reportWebVitals.js
