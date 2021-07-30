@@ -21,7 +21,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "eslint": "eslint ."
+        "eslint": "eslint .",
+         "pre-commit": "pretty-quick --staged"
     },
     "eslintConfig": {
         "extends": [
@@ -45,7 +46,9 @@
         "eslint": "^7.31.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-jest": "^24.3.6",
+        "husky": "^7.0.0",
         "jsdoc": "^3.6.7",
-        "prettier": "2.3.2"
+        "prettier": "2.3.2",
+        "pretty-quick": "^3.1.1"
     }
 }

@@ -21,10 +21,6 @@ module.exports = {
     "react", "jest"
   ],
   "rules": {
-    "quotes": [
-      "error",
-      "single"
-    ],
     "eqeqeq": "error",
     "no-console": 0,
     "react/prop-types": 0
