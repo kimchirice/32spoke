@@ -72,7 +72,7 @@ function Home() {
     const [currentStep, setCurrentStep] = useState(1)
 
     const handleHub = (event) => {
-        let { name, value } = event.target
+        const { name, value } = event.target
         //adding conditions to validate the input
 
         setHub((prev) => ({
@@ -82,7 +82,7 @@ function Home() {
     }
 
     const handleRim = (event) => {
-        let { name, value } = event.target
+        const { name, value } = event.target
         setRim((prev) => ({
             ...prev,
             [name]: value,
@@ -90,7 +90,7 @@ function Home() {
     }
 
     const handleSpoke = (event) => {
-        let { name, value } = event.target
+        const { name, value } = event.target
         setSpoke((prev) => ({
             ...prev,
             [name]: value,
@@ -115,34 +115,25 @@ function Home() {
         if (currentStep < 4) {
             setCurrentStep((preV) => (preV += 1))
         }
-        // calculate left side
-        // d, r1, r2, r3, m, k
-        let centerToFlangeLeft = parseFloat(hub.leftFlangeToCenter)
-        let centerToFlangeRight = parseFloat(hub.rightFlangeToCenter)
-        let m = parseFloat(spoke.numberOfSpokes) / 2
-        let kLeft = parseFloat(spoke.lacingPatternLeft)
-        let kRight = parseFloat(spoke.lacingPatternRight)
-        let radius1 = parseFloat(hub.leftFlangeDiameter) / 2
-        let radius2 = parseFloat(rim.rimERD) / 2
-        let radius3 = parseFloat(hub.spokeHoleDiameter) / 2
 
+        // calculate left side
         const spokeLengthLeftUpdate = SpokeCalculator(
-            centerToFlangeLeft,
-            radius1,
-            radius2,
-            radius3,
-            m,
-            kLeft
+            hub.leftFlangeToCenter,
+            hub.leftFlangeDiameter,
+            rim.rimERD,
+            hub.spokeHoleDiameter,
+            spoke.numberOfSpokes,
+            spoke.lacingPatternLeft
         )
 
         // Calculate right side
         const spokeLengthRightUpdate = SpokeCalculator(
-            centerToFlangeRight,
-            radius1,
-            radius2,
-            radius3,
-            m,
-            kRight
+            hub.rightFlangeToCenter,
+            hub.rightFlangeDiameter,
+            rim.rimERD,
+            hub.spokeHoleDiameter,
+            spoke.numberOfSpokes,
+            spoke.lacingPatternRight
         )
         setSpokeLength([spokeLengthLeftUpdate, spokeLengthRightUpdate])
     }
