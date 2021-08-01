@@ -25,7 +25,21 @@ const roundNumberToTowDecimal = (num) => {
  * @returns {*|number}
  */
 
-const spokeCalculator = (centerToFlange, flangeDiameter, rimERD, spokeHoleDiameter, numberOfSpokes, crossings) => {
+const spokeCalculator = (
+    centerToFlange,
+    flangeDiameter,
+    rimERD,
+    spokeHoleDiameter,
+    numberOfSpokes,
+    crossings) => {
+
+    centerToFlange = parseFloat(centerToFlange)
+    numberOfSpokes = parseFloat(numberOfSpokes)
+    crossings = parseFloat(crossings)
+    flangeDiameter = parseFloat(flangeDiameter)
+    rimERD = parseFloat(rimERD)
+    spokeHoleDiameter = parseFloat(spokeHoleDiameter)
+
     const angle = angleCalculator(crossings, numberOfSpokes)
 
     let spokeLength =
